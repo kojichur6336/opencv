@@ -1,0 +1,18 @@
+PODS:
+  - YKRarKit (0.1.0):
+    - YKRarKit/unrar-lib (= 0.1.0)
+  - YKRarKit/unrar-lib (0.1.0)
+
+DEPENDENCIES:
+  - YKRarKit (from `../`)
+
+EXTERNAL SOURCES:
+  YKRarKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YKRarKit: 2cb95e8e32e0c82f09584bd2d917a3add727c469
+
+PODFILE CHECKSUM: 0bb27f7e36f8d6dc218d2dfd9829a9a363a64bb3
+
+COCOAPODS: 1.16.2

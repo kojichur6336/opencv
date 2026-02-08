@@ -1,0 +1,18 @@
+PODS:
+  - YKHUD (1.0.0):
+    - YKHUD/Source (= 1.0.0)
+  - YKHUD/Source (1.0.0)
+
+DEPENDENCIES:
+  - YKHUD (from `../`)
+
+EXTERNAL SOURCES:
+  YKHUD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YKHUD: 6227e942b6787057796afccaee918d27d0582da5
+
+PODFILE CHECKSUM: 7fad8b9823c6781225d47b9a413a3a9dfacd4f76
+
+COCOAPODS: 1.16.2

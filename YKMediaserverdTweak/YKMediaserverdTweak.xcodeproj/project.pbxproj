@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8099E4132EBB73EA00911E0E /* YKHookMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 8099E4122EBB73EA00911E0E /* YKHookMedia.m */; };
+		8099E41E2EBB746100911E0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E41D2EBB746100911E0E /* UIKit.framework */; };
+		8099E4202EBB746700911E0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E41F2EBB746700911E0E /* AVFoundation.framework */; };
+		8099E4222EBB746D00911E0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4212EBB746D00911E0E /* Foundation.framework */; };
+		8099E4242EBB748400911E0E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4232EBB748400911E0E /* CoreAudio.framework */; };
+		8099E4262EBB749C00911E0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4252EBB749C00911E0E /* AudioToolbox.framework */; };
+		8099E4482EBF75DB00911E0E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4472EBF75DB00911E0E /* Security.framework */; };
+		8099E44C2EBF761E00911E0E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E44B2EBF761E00911E0E /* CFNetwork.framework */; };
+		8099E4512EBF7D5800911E0E /* YKIPCKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4502EBF7D5800911E0E /* YKIPCKey.framework */; };
+		8099E4532EBF7D6100911E0E /* YKXPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8099E4522EBF7D6100911E0E /* YKXPC.framework */; };
+		80A5CECC2F1513A800A3943A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A5CECB2F1513A800A3943A /* CoreVideo.framework */; };
+		80A5CECD2F1513E300A3943A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730036FC2EBDBA6F00E86F99 /* CoreMedia.framework */; };
+		80A5CED42F151D0100A3943A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A5CED32F151D0100A3943A /* CoreImage.framework */; };
+		80A5CED62F151D0C00A3943A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A5CED52F151D0C00A3943A /* CoreGraphics.framework */; };
+		80A5CED82F1526BF00A3943A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A5CED72F1526BF00A3943A /* VideoToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8099E40C2EBB73EA00911E0E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		730036FC2EBDBA6F00E86F99 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8099E40E2EBB73EA00911E0E /* libYKMediaserverdTweak.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYKMediaserverdTweak.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		8099E4122EBB73EA00911E0E /* YKHookMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHookMedia.m; sourceTree = "<group>"; };
+		8099E41D2EBB746100911E0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8099E41F2EBB746700911E0E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8099E4212EBB746D00911E0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8099E4232EBB748400911E0E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		8099E4252EBB749C00911E0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8099E4472EBF75DB00911E0E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8099E4492EBF75FC00911E0E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8099E44B2EBF761E00911E0E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8099E4502EBF7D5800911E0E /* YKIPCKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKIPCKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8099E4522EBF7D6100911E0E /* YKXPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKXPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A5CECB2F1513A800A3943A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		80A5CED32F151D0100A3943A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		80A5CED52F151D0C00A3943A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80A5CED72F1526BF00A3943A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8099E40B2EBB73EA00911E0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A5CED82F1526BF00A3943A /* VideoToolbox.framework in Frameworks */,
+				80A5CED62F151D0C00A3943A /* CoreGraphics.framework in Frameworks */,
+				80A5CED42F151D0100A3943A /* CoreImage.framework in Frameworks */,
+				80A5CECD2F1513E300A3943A /* CoreMedia.framework in Frameworks */,
+				80A5CECC2F1513A800A3943A /* CoreVideo.framework in Frameworks */,
+				8099E4532EBF7D6100911E0E /* YKXPC.framework in Frameworks */,
+				8099E4512EBF7D5800911E0E /* YKIPCKey.framework in Frameworks */,
+				8099E44C2EBF761E00911E0E /* CFNetwork.framework in Frameworks */,
+				8099E4482EBF75DB00911E0E /* Security.framework in Frameworks */,
+				8099E4262EBB749C00911E0E /* AudioToolbox.framework in Frameworks */,
+				8099E4242EBB748400911E0E /* CoreAudio.framework in Frameworks */,
+				8099E4222EBB746D00911E0E /* Foundation.framework in Frameworks */,
+				8099E4202EBB746700911E0E /* AVFoundation.framework in Frameworks */,
+				8099E41E2EBB746100911E0E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8099E4052EBB73EA00911E0E = {
+			isa = PBXGroup;
+			children = (
+				8099E41B2EBB73F200911E0E /* YKMediaserverdTweak */,
+				8099E41C2EBB746100911E0E /* Frameworks */,
+				8099E40F2EBB73EA00911E0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8099E40F2EBB73EA00911E0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8099E40E2EBB73EA00911E0E /* libYKMediaserverdTweak.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8099E41B2EBB73F200911E0E /* YKMediaserverdTweak */ = {
+			isa = PBXGroup;
+			children = (
+				8099E4122EBB73EA00911E0E /* YKHookMedia.m */,
+			);
+			path = YKMediaserverdTweak;
+			sourceTree = "<group>";
+		};
+		8099E41C2EBB746100911E0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80A5CED72F1526BF00A3943A /* VideoToolbox.framework */,
+				80A5CED52F151D0C00A3943A /* CoreGraphics.framework */,
+				80A5CED32F151D0100A3943A /* CoreImage.framework */,
+				80A5CECB2F1513A800A3943A /* CoreVideo.framework */,
+				8099E4522EBF7D6100911E0E /* YKXPC.framework */,
+				8099E4502EBF7D5800911E0E /* YKIPCKey.framework */,
+				8099E44B2EBF761E00911E0E /* CFNetwork.framework */,
+				8099E4492EBF75FC00911E0E /* CoreFoundation.framework */,
+				8099E4472EBF75DB00911E0E /* Security.framework */,
+				730036FC2EBDBA6F00E86F99 /* CoreMedia.framework */,
+				8099E4252EBB749C00911E0E /* AudioToolbox.framework */,
+				8099E4232EBB748400911E0E /* CoreAudio.framework */,
+				8099E4212EBB746D00911E0E /* Foundation.framework */,
+				8099E41F2EBB746700911E0E /* AVFoundation.framework */,
+				8099E41D2EBB746100911E0E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8099E40D2EBB73EA00911E0E /* YKMediaserverdTweak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8099E4182EBB73EA00911E0E /* Build configuration list for PBXNativeTarget "YKMediaserverdTweak" */;
+			buildPhases = (
+				8099E40A2EBB73EA00911E0E /* Sources */,
+				8099E40B2EBB73EA00911E0E /* Frameworks */,
+				8099E40C2EBB73EA00911E0E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKMediaserverdTweak;
+			productName = YKAudioTweak;
+			productReference = 8099E40E2EBB73EA00911E0E /* libYKMediaserverdTweak.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8099E4062EBB73EA00911E0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					8099E40D2EBB73EA00911E0E = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 8099E4092EBB73EA00911E0E /* Build configuration list for PBXProject "YKMediaserverdTweak" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8099E4052EBB73EA00911E0E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8099E40F2EBB73EA00911E0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8099E40D2EBB73EA00911E0E /* YKMediaserverdTweak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8099E40A2EBB73EA00911E0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8099E4132EBB73EA00911E0E /* YKHookMedia.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8099E4162EBB73EA00911E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8099E4172EBB73EA00911E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8099E4192EBB73EA00911E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = dylib;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YKMediaserverdTweak/Core",
+					"$(PROJECT_DIR)/YKMediaserverdTweak/Roothide",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-strict-prototypes";
+			};
+			name = Debug;
+		};
+		8099E41A2EBB73EA00911E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = dylib;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YKMediaserverdTweak/Core",
+					"$(PROJECT_DIR)/YKMediaserverdTweak/Roothide",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-strict-prototypes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8099E4092EBB73EA00911E0E /* Build configuration list for PBXProject "YKMediaserverdTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8099E4162EBB73EA00911E0E /* Debug */,
+				8099E4172EBB73EA00911E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8099E4182EBB73EA00911E0E /* Build configuration list for PBXNativeTarget "YKMediaserverdTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8099E4192EBB73EA00911E0E /* Debug */,
+				8099E41A2EBB73EA00911E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8099E4062EBB73EA00911E0E /* Project object */;
+}

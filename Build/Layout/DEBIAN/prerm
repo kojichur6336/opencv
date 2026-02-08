@@ -1,0 +1,12 @@
+#!/bin/bash
+echo 'prerm'
+echo 'Clean old files...'
+if launchctl list | grep -q com.sky.yklaunchd; then
+    launchctl stop com.sky.yklaunchd
+    launchctl unload /var/jb/Library/LaunchDaemons/com.sky.yklaunchd.plist
+fi
+
+killall -9 pasted >/dev/null 2>&1
+killall -9 YKApp >/dev/null 2>&1
+killall -9 YKService >/dev/null 2>&1
+exit 0

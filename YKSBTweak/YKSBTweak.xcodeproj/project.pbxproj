@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7340EB092E765C6F00AF70D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EB082E765C6F00AF70D9 /* UIKit.framework */; };
+		7340EB0B2E765C7400AF70D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EB0A2E765C7400AF70D9 /* Foundation.framework */; };
+		7340EB0E2E765C9500AF70D9 /* YKHookSpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB0D2E765C9500AF70D9 /* YKHookSpringBoard.m */; };
+		7340EB152E765FFD00AF70D9 /* YKSBTweakController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB142E765FFD00AF70D9 /* YKSBTweakController.m */; };
+		73A0C1412EE3FE0B00A39757 /* YKSBRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A0C1402EE3FE0B00A39757 /* YKSBRecordViewController.m */; };
+		73BF02F42F2DA06C00720FFF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF02F32F2DA06C00720FFF /* AudioToolbox.framework */; };
+		73BF02FA2F2DDC6500720FFF /* YKHookSBRingerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BF02F92F2DDC6500720FFF /* YKHookSBRingerControl.m */; };
+		73BF02FC2F2F02F800720FFF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF02FB2F2F02F800720FFF /* CoreFoundation.framework */; };
+		73BF03042F317E2900720FFF /* YKDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BF03032F317E2900720FFF /* YKDeviceManager.m */; };
+		73BF03062F317E6000720FFF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF03052F317E6000720FFF /* IOKit.framework */; };
+		73BF03082F31806500720FFF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BF03072F31806500720FFF /* CoreTelephony.framework */; };
+		73BF030F2F31D32700720FFF /* YKHookSBBannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BF030E2F31D32700720FFF /* YKHookSBBannerManager.m */; };
+		73DB64E42E7A466A0089784C /* YKSBToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB64E32E7A466A0089784C /* YKSBToast.m */; };
+		73DB64E72E7A477B0089784C /* YKSBIPCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB64E62E7A477B0089784C /* YKSBIPCController.m */; };
+		73DB64E92E7A48F50089784C /* YKXPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DB64E82E7A48F50089784C /* YKXPC.framework */; };
+		73DB64EB2E7A48F80089784C /* YKIPCKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DB64EA2E7A48F80089784C /* YKIPCKey.framework */; };
+		73DB64F92E7A508D0089784C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DB64F82E7A508D0089784C /* CoreGraphics.framework */; };
+		73DB655B2E7BEFEB0089784C /* YKCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB655A2E7BEFEB0089784C /* YKCommand.m */; };
+		73FBFE7C2EB5F232002FEC7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FBFE7B2EB5F232002FEC7F /* AVFoundation.framework */; };
+		805430652F077F9C00C119C9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805430642F077F9C00C119C9 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7340EAF62E7658AE00AF70D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7340EAF82E7658AE00AF70D9 /* libYKSBTweak.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYKSBTweak.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7340EB082E765C6F00AF70D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7340EB0A2E765C7400AF70D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7340EB0D2E765C9500AF70D9 /* YKHookSpringBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHookSpringBoard.m; sourceTree = "<group>"; };
+		7340EB0F2E765F9300AF70D9 /* YKSBHookHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBHookHeader.h; sourceTree = "<group>"; };
+		7340EB132E765FFD00AF70D9 /* YKSBTweakController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBTweakController.h; sourceTree = "<group>"; };
+		7340EB142E765FFD00AF70D9 /* YKSBTweakController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSBTweakController.m; sourceTree = "<group>"; };
+		73A0C13F2EE3FE0B00A39757 /* YKSBRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBRecordViewController.h; sourceTree = "<group>"; };
+		73A0C1402EE3FE0B00A39757 /* YKSBRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSBRecordViewController.m; sourceTree = "<group>"; };
+		73BF02F32F2DA06C00720FFF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		73BF02F92F2DDC6500720FFF /* YKHookSBRingerControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHookSBRingerControl.m; sourceTree = "<group>"; };
+		73BF02FB2F2F02F800720FFF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		73BF03022F317E2900720FFF /* YKDeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDeviceManager.h; sourceTree = "<group>"; };
+		73BF03032F317E2900720FFF /* YKDeviceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDeviceManager.m; sourceTree = "<group>"; };
+		73BF03052F317E6000720FFF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		73BF03072F31806500720FFF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		73BF030E2F31D32700720FFF /* YKHookSBBannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHookSBBannerManager.m; sourceTree = "<group>"; };
+		73DB64E22E7A466A0089784C /* YKSBToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBToast.h; sourceTree = "<group>"; };
+		73DB64E32E7A466A0089784C /* YKSBToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSBToast.m; sourceTree = "<group>"; };
+		73DB64E52E7A477B0089784C /* YKSBIPCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBIPCController.h; sourceTree = "<group>"; };
+		73DB64E62E7A477B0089784C /* YKSBIPCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKSBIPCController.m; sourceTree = "<group>"; };
+		73DB64E82E7A48F50089784C /* YKXPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKXPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DB64EA2E7A48F80089784C /* YKIPCKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKIPCKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73DB64EE2E7A4A0A0089784C /* YKSBLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSBLogger.h; sourceTree = "<group>"; };
+		73DB64F82E7A508D0089784C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73DB65592E7BEFEB0089784C /* YKCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCommand.h; sourceTree = "<group>"; };
+		73DB655A2E7BEFEB0089784C /* YKCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCommand.m; sourceTree = "<group>"; };
+		73FBFE7B2EB5F232002FEC7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		805430642F077F9C00C119C9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7340EAF52E7658AE00AF70D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BF03082F31806500720FFF /* CoreTelephony.framework in Frameworks */,
+				73BF03062F317E6000720FFF /* IOKit.framework in Frameworks */,
+				73BF02FC2F2F02F800720FFF /* CoreFoundation.framework in Frameworks */,
+				73BF02F42F2DA06C00720FFF /* AudioToolbox.framework in Frameworks */,
+				805430652F077F9C00C119C9 /* QuartzCore.framework in Frameworks */,
+				73FBFE7C2EB5F232002FEC7F /* AVFoundation.framework in Frameworks */,
+				73DB64F92E7A508D0089784C /* CoreGraphics.framework in Frameworks */,
+				73DB64EB2E7A48F80089784C /* YKIPCKey.framework in Frameworks */,
+				73DB64E92E7A48F50089784C /* YKXPC.framework in Frameworks */,
+				7340EB0B2E765C7400AF70D9 /* Foundation.framework in Frameworks */,
+				7340EB092E765C6F00AF70D9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7340EAEF2E7658AE00AF70D9 = {
+			isa = PBXGroup;
+			children = (
+				7340EB052E7658B200AF70D9 /* YKSBTweak */,
+				7340EB072E765C6F00AF70D9 /* Frameworks */,
+				7340EAF92E7658AE00AF70D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7340EAF92E7658AE00AF70D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7340EAF82E7658AE00AF70D9 /* libYKSBTweak.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7340EB052E7658B200AF70D9 /* YKSBTweak */ = {
+			isa = PBXGroup;
+			children = (
+				73DB64EC2E7A49F10089784C /* Kit */,
+				7340EB122E765FE700AF70D9 /* Controller */,
+				7340EB062E7658C200AF70D9 /* Hook */,
+			);
+			path = YKSBTweak;
+			sourceTree = "<group>";
+		};
+		7340EB062E7658C200AF70D9 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB0F2E765F9300AF70D9 /* YKSBHookHeader.h */,
+				7340EB0D2E765C9500AF70D9 /* YKHookSpringBoard.m */,
+				73BF02F92F2DDC6500720FFF /* YKHookSBRingerControl.m */,
+				73BF030E2F31D32700720FFF /* YKHookSBBannerManager.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
+		7340EB072E765C6F00AF70D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73BF03072F31806500720FFF /* CoreTelephony.framework */,
+				73BF03052F317E6000720FFF /* IOKit.framework */,
+				73BF02FB2F2F02F800720FFF /* CoreFoundation.framework */,
+				73BF02F32F2DA06C00720FFF /* AudioToolbox.framework */,
+				805430642F077F9C00C119C9 /* QuartzCore.framework */,
+				73FBFE7B2EB5F232002FEC7F /* AVFoundation.framework */,
+				73DB64F82E7A508D0089784C /* CoreGraphics.framework */,
+				73DB64EA2E7A48F80089784C /* YKIPCKey.framework */,
+				73DB64E82E7A48F50089784C /* YKXPC.framework */,
+				7340EB0A2E765C7400AF70D9 /* Foundation.framework */,
+				7340EB082E765C6F00AF70D9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7340EB122E765FE700AF70D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB132E765FFD00AF70D9 /* YKSBTweakController.h */,
+				7340EB142E765FFD00AF70D9 /* YKSBTweakController.m */,
+				73DB64E52E7A477B0089784C /* YKSBIPCController.h */,
+				73DB64E62E7A477B0089784C /* YKSBIPCController.m */,
+				73A0C13F2EE3FE0B00A39757 /* YKSBRecordViewController.h */,
+				73A0C1402EE3FE0B00A39757 /* YKSBRecordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		73DB64E12E7A46550089784C /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				73DB64E22E7A466A0089784C /* YKSBToast.h */,
+				73DB64E32E7A466A0089784C /* YKSBToast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		73DB64EC2E7A49F10089784C /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				73DB65582E7BEFC80089784C /* Command */,
+				73DB64E12E7A46550089784C /* Toast */,
+				73DB64ED2E7A49F70089784C /* Logger */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		73DB64ED2E7A49F70089784C /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				73DB64EE2E7A4A0A0089784C /* YKSBLogger.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		73DB65582E7BEFC80089784C /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				73DB65592E7BEFEB0089784C /* YKCommand.h */,
+				73DB655A2E7BEFEB0089784C /* YKCommand.m */,
+				73BF03022F317E2900720FFF /* YKDeviceManager.h */,
+				73BF03032F317E2900720FFF /* YKDeviceManager.m */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7340EAF72E7658AE00AF70D9 /* YKSBTweak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7340EB022E7658AE00AF70D9 /* Build configuration list for PBXNativeTarget "YKSBTweak" */;
+			buildPhases = (
+				7340EAF42E7658AE00AF70D9 /* Sources */,
+				7340EAF52E7658AE00AF70D9 /* Frameworks */,
+				7340EAF62E7658AE00AF70D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKSBTweak;
+			productName = YKSBTweak;
+			productReference = 7340EAF82E7658AE00AF70D9 /* libYKSBTweak.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7340EAF02E7658AE00AF70D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					7340EAF72E7658AE00AF70D9 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 7340EAF32E7658AE00AF70D9 /* Build configuration list for PBXProject "YKSBTweak" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7340EAEF2E7658AE00AF70D9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7340EAF92E7658AE00AF70D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7340EAF72E7658AE00AF70D9 /* YKSBTweak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7340EAF42E7658AE00AF70D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7340EB0E2E765C9500AF70D9 /* YKHookSpringBoard.m in Sources */,
+				73DB64E42E7A466A0089784C /* YKSBToast.m in Sources */,
+				73A0C1412EE3FE0B00A39757 /* YKSBRecordViewController.m in Sources */,
+				73BF03042F317E2900720FFF /* YKDeviceManager.m in Sources */,
+				73BF030F2F31D32700720FFF /* YKHookSBBannerManager.m in Sources */,
+				73BF02FA2F2DDC6500720FFF /* YKHookSBRingerControl.m in Sources */,
+				7340EB152E765FFD00AF70D9 /* YKSBTweakController.m in Sources */,
+				73DB64E72E7A477B0089784C /* YKSBIPCController.m in Sources */,
+				73DB655B2E7BEFEB0089784C /* YKCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7340EB002E7658AE00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7340EB012E7658AE00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7340EB032E7658AE00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3QUYBW86F;
+				EXECUTABLE_EXTENSION = dylib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-strict-prototypes";
+			};
+			name = Debug;
+		};
+		7340EB042E7658AE00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3QUYBW86F;
+				EXECUTABLE_EXTENSION = dylib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-strict-prototypes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7340EAF32E7658AE00AF70D9 /* Build configuration list for PBXProject "YKSBTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EB002E7658AE00AF70D9 /* Debug */,
+				7340EB012E7658AE00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7340EB022E7658AE00AF70D9 /* Build configuration list for PBXNativeTarget "YKSBTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EB032E7658AE00AF70D9 /* Debug */,
+				7340EB042E7658AE00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7340EAF02E7658AE00AF70D9 /* Project object */;
+}

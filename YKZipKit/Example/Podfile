@@ -1,0 +1,5 @@
+platform :ios, '13.0'
+
+target 'YKZipKit_Example' do
+  pod 'YKZipKit', :path => '../'
+end

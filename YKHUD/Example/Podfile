@@ -1,0 +1,7 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'YKHUD_Example' do
+  pod 'YKHUD', :path => '../'
+end

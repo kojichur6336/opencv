@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo 'postrm'
+
+killall -9 pasted >/dev/null 2>&1
+killall -9 YKApp >/dev/null 2>&1
+killall -9 YKService >/dev/null 2>&1
+
+echo $1
+if [[ $1 == remove ]]; then
+    uicache -a >/dev/null 2>&1
+    
+    declare -a cydia
+    cydia=($CYDIA)
+    if [[ ${CYDIA+@} ]]; then
+        eval "echo 'finish:reload' >&${cydia[0]}"
+    else
+        killall -9 SpringBoard
+        echo "remove finish! reload SpringBoard..."
+    fi
+fi
+
+exit 0

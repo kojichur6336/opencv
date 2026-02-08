@@ -1,0 +1,30 @@
+source 'https://cdn.cocoapods.org'
+
+workspace '../YK.xcworkspace'
+inhibit_all_warnings!
+
+platform :ios,'13.0'
+
+
+target 'YKService' do
+  project '../YKService/YKService.xcodeproj'
+  pod 'YKZipKit', :path => "../YKZipKit"
+  pod 'YKRarKit', :path => "../YKRarKit"
+  pod 'YKSocket', :path => "../YKSocket"
+end
+
+
+target 'YKApp' do
+  project '../YKApp/YKApp.xcodeproj'
+  pod 'YKHUD', :path => "../YKHUD"
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ARCHS'] = 'arm64 arm64e'
+      config.build_settings['CLANG_ENABLE_MODULES'] = 'NO'#Xcode16 ollvm需要关闭这些
+    end
+  end
+end

@@ -1,0 +1,13 @@
+Package: com.sky.ykpro
+Name: 远控Pro
+Version: 2.0.1
+Icon: file:///var/jb/Applications/YKApp.app/AppIcon60x60@2x.png
+Description: 远程控制手机
+Depiction: 远程控制手机
+Section: Packaging
+Depends: firmware (>= 15.0), mobilesubstrate
+Conflicts:
+Replaces: 
+Architecture: iphoneos-arm64
+Author: YKP
+Maintainer: YKP

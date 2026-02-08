@@ -1,0 +1,16 @@
+PODS:
+  - YKZipKit (0.1.0)
+
+DEPENDENCIES:
+  - YKZipKit (from `../`)
+
+EXTERNAL SOURCES:
+  YKZipKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YKZipKit: c8ba2bf862e370ad2243edb9e9c14e5850bfd274
+
+PODFILE CHECKSUM: 24f9a605743fa0d7a5abb8e75b6b5f36d3fc628b
+
+COCOAPODS: 1.16.2

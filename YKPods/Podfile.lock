@@ -1,0 +1,37 @@
+PODS:
+  - YKHUD (1.0.0):
+    - YKHUD/Source (= 1.0.0)
+  - YKHUD/Source (1.0.0)
+  - YKRarKit (0.1.0):
+    - YKRarKit/unrar-lib (= 0.1.0)
+  - YKRarKit/unrar-lib (0.1.0)
+  - YKSocket (1.0.0):
+    - YKSocket/Core (= 1.0.0)
+  - YKSocket/Core (1.0.0)
+  - YKZipKit (1.0.0)
+
+DEPENDENCIES:
+  - YKHUD (from `../YKHUD`)
+  - YKRarKit (from `../YKRarKit`)
+  - YKSocket (from `../YKSocket`)
+  - YKZipKit (from `../YKZipKit`)
+
+EXTERNAL SOURCES:
+  YKHUD:
+    :path: "../YKHUD"
+  YKRarKit:
+    :path: "../YKRarKit"
+  YKSocket:
+    :path: "../YKSocket"
+  YKZipKit:
+    :path: "../YKZipKit"
+
+SPEC CHECKSUMS:
+  YKHUD: 6227e942b6787057796afccaee918d27d0582da5
+  YKRarKit: 2cb95e8e32e0c82f09584bd2d917a3add727c469
+  YKSocket: 6d38e17a51096739f4216e39d35d81e4c4589161
+  YKZipKit: ac3facf74e0f6bce5dd94a60c832e0950154601a
+
+PODFILE CHECKSUM: fc8c9b1a3081c3ff1c7380a5f3fd831d4a7bf7ad
+
+COCOAPODS: 1.16.2

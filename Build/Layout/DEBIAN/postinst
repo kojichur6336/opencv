@@ -1,0 +1,76 @@
+#!/bin/bash
+
+echo 'postinst'
+
+
+# 创建基础目录
+if [ ! -d /var/mobile/Library/YKApp ]; then
+    mkdir /var/mobile/Library/YKApp
+fi
+
+# 如果 LockFile 是一个文件（不是目录），先删掉它
+if [ -f "/var/mobile/Library/YKApp/LockFile" ]; then
+    rm -f "/var/mobile/Library/YKApp/LockFile"
+fi
+
+# 创建LockFile目录
+if [ ! -d /var/mobile/Library/YKApp/LockFile ]; then
+    mkdir /var/mobile/Library/YKApp/LockFile
+fi
+
+# 创建Config目录
+if [ ! -d /var/mobile/Library/YKApp/Config ]; then
+    mkdir /var/mobile/Library/YKApp/Config
+fi
+
+# 创建Logs目录
+if [ ! -d /var/mobile/Library/YKApp/Logs ]; then
+    mkdir /var/mobile/Library/YKApp/Logs
+fi
+
+# 创建崩溃日志目录
+if [ ! -d /var/mobile/Library/YKApp/CrashLogs ]; then
+    mkdir /var/mobile/Library/YKApp/CrashLogs
+fi
+
+# 创建下载目录
+if [ ! -d /var/mobile/Library/YKApp/Downloads ]; then
+    mkdir /var/mobile/Library/YKApp/Downloads
+    mkdir /var/mobile/Library/YKApp/Downloads/Tmp
+    mkdir /var/mobile/Library/YKApp/Downloads/Deb
+    mkdir /var/mobile/Library/YKApp/Downloads/Ipa
+fi
+
+
+
+# 设置 App 所属权限
+chown -R root:wheel             /var/jb/Applications/YKApp.app
+chown -R mobile:mobile          /var/mobile/Library/YKApp
+chmod -R 755                    /var/mobile/Library/YKApp
+
+
+# App 二进制目录权限
+chmod 755                       /var/jb/Applications/YKApp.app/bin
+chmod u+s                       /var/jb/Applications/YKApp.app/bin/YKService
+
+# LaunchDaemon 配置
+chmod 644                       /var/jb/Library/LaunchDaemons/com.sky.yklaunchd.plist
+chown root:wheel                /var/jb/Library/LaunchDaemons/com.sky.yklaunchd.plist
+
+
+
+killall -9 YKApp >/dev/null 2>&1
+killall -9 YKService >/dev/null 2>&1
+
+uicache -a >/dev/null 2>&1
+
+declare -a cydia
+cydia=($CYDIA)
+if [[ ${CYDIA+@} ]]; then
+    eval "echo 'finish:reload' >&${cydia[0]}"
+else
+    killall -9 SpringBoard
+    echo "install finish! reload SpringBoard..."
+fi
+launchctl load /var/jb/Library/LaunchDaemons/com.sky.yklaunchd.plist
+exit 0

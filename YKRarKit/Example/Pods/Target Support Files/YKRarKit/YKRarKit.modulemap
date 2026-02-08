@@ -1,0 +1,6 @@
+framework module YKRarKit {
+  umbrella header "YKRarKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7340EA722E764D1B00AF70D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EA712E764D1B00AF70D9 /* UIKit.framework */; };
+		7340EA742E764D2000AF70D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EA732E764D2000AF70D9 /* Foundation.framework */; };
+		7340EA7D2E764DB600AF70D9 /* libroothide.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EA792E764DB600AF70D9 /* libroothide.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7340EA812E764DE500AF70D9 /* YKShell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7340EA802E764DE500AF70D9 /* YKShell.mm */; };
+		7340EA852E764EA600AF70D9 /* YKLaunchd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EA842E764EA600AF70D9 /* YKLaunchd.m */; };
+		7340EB4E2E76809100AF70D9 /* YKLaunchdService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB4D2E76809100AF70D9 /* YKLaunchdService.m */; };
+		803587A82E883F5200098740 /* YKXPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803587A72E883F5200098740 /* YKXPC.framework */; };
+		803587AA2E883F9A00098740 /* YKIPCKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803587A92E883F9A00098740 /* YKIPCKey.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7340EA512E764CAD00AF70D9 /* YKLaunchd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKLaunchd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7340EA712E764D1B00AF70D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7340EA732E764D2000AF70D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7340EA752E764D7800AF70D9 /* YKLaunchdLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLaunchdLogger.h; sourceTree = "<group>"; };
+		7340EA792E764DB600AF70D9 /* libroothide.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libroothide.tbd; sourceTree = "<group>"; };
+		7340EA7A2E764DB600AF70D9 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		7340EA7B2E764DB600AF70D9 /* roothide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = roothide.h; sourceTree = "<group>"; };
+		7340EA7C2E764DB600AF70D9 /* stub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stub.h; sourceTree = "<group>"; };
+		7340EA7F2E764DE500AF70D9 /* YKShell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKShell.h; sourceTree = "<group>"; };
+		7340EA802E764DE500AF70D9 /* YKShell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YKShell.mm; sourceTree = "<group>"; };
+		7340EA832E764EA600AF70D9 /* YKLaunchd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLaunchd.h; sourceTree = "<group>"; };
+		7340EA842E764EA600AF70D9 /* YKLaunchd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLaunchd.m; sourceTree = "<group>"; };
+		7340EB4C2E76809100AF70D9 /* YKLaunchdService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLaunchdService.h; sourceTree = "<group>"; };
+		7340EB4D2E76809100AF70D9 /* YKLaunchdService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLaunchdService.m; sourceTree = "<group>"; };
+		803587A72E883F5200098740 /* YKXPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKXPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		803587A92E883F9A00098740 /* YKIPCKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKIPCKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7340EA4E2E764CAD00AF70D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803587AA2E883F9A00098740 /* YKIPCKey.framework in Frameworks */,
+				803587A82E883F5200098740 /* YKXPC.framework in Frameworks */,
+				7340EA7D2E764DB600AF70D9 /* libroothide.tbd in Frameworks */,
+				7340EA742E764D2000AF70D9 /* Foundation.framework in Frameworks */,
+				7340EA722E764D1B00AF70D9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7340EA482E764CAD00AF70D9 = {
+			isa = PBXGroup;
+			children = (
+				7340EA6E2E764CC500AF70D9 /* YKLaunchd */,
+				7340EA702E764D1B00AF70D9 /* Frameworks */,
+				7340EA522E764CAD00AF70D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7340EA522E764CAD00AF70D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA512E764CAD00AF70D9 /* YKLaunchd.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7340EA6E2E764CC500AF70D9 /* YKLaunchd */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA822E764E9400AF70D9 /* Main */,
+				7340EA7E2E764DD100AF70D9 /* Shell */,
+				7340EA782E764D9B00AF70D9 /* Roothide */,
+				7340EA6F2E764CDD00AF70D9 /* Logger */,
+			);
+			path = YKLaunchd;
+			sourceTree = "<group>";
+		};
+		7340EA6F2E764CDD00AF70D9 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA752E764D7800AF70D9 /* YKLaunchdLogger.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		7340EA702E764D1B00AF70D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				803587A92E883F9A00098740 /* YKIPCKey.framework */,
+				803587A72E883F5200098740 /* YKXPC.framework */,
+				7340EA732E764D2000AF70D9 /* Foundation.framework */,
+				7340EA712E764D1B00AF70D9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7340EA782E764D9B00AF70D9 /* Roothide */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA792E764DB600AF70D9 /* libroothide.tbd */,
+				7340EA7A2E764DB600AF70D9 /* module.modulemap */,
+				7340EA7B2E764DB600AF70D9 /* roothide.h */,
+				7340EA7C2E764DB600AF70D9 /* stub.h */,
+			);
+			path = Roothide;
+			sourceTree = "<group>";
+		};
+		7340EA7E2E764DD100AF70D9 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA7F2E764DE500AF70D9 /* YKShell.h */,
+				7340EA802E764DE500AF70D9 /* YKShell.mm */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		7340EA822E764E9400AF70D9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7340EA832E764EA600AF70D9 /* YKLaunchd.h */,
+				7340EA842E764EA600AF70D9 /* YKLaunchd.m */,
+				7340EB4C2E76809100AF70D9 /* YKLaunchdService.h */,
+				7340EB4D2E76809100AF70D9 /* YKLaunchdService.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7340EA502E764CAD00AF70D9 /* YKLaunchd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7340EA692E764CAE00AF70D9 /* Build configuration list for PBXNativeTarget "YKLaunchd" */;
+			buildPhases = (
+				7340EA4D2E764CAD00AF70D9 /* Sources */,
+				7340EA4E2E764CAD00AF70D9 /* Frameworks */,
+				7340EA4F2E764CAD00AF70D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKLaunchd;
+			productName = YKLaunchd;
+			productReference = 7340EA512E764CAD00AF70D9 /* YKLaunchd.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7340EA492E764CAD00AF70D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					7340EA502E764CAD00AF70D9 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 7340EA4C2E764CAD00AF70D9 /* Build configuration list for PBXProject "YKLaunchd" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7340EA482E764CAD00AF70D9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7340EA522E764CAD00AF70D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7340EA502E764CAD00AF70D9 /* YKLaunchd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7340EA4F2E764CAD00AF70D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7340EA4D2E764CAD00AF70D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7340EA812E764DE500AF70D9 /* YKShell.mm in Sources */,
+				7340EB4E2E76809100AF70D9 /* YKLaunchdService.m in Sources */,
+				7340EA852E764EA600AF70D9 /* YKLaunchd.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7340EA6A2E764CAE00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74MC74A426;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YKLaunchd/Roothide",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.YKLaunchd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7340EA6B2E764CAE00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74MC74A426;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YKLaunchd/Roothide",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.YKLaunchd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7340EA6C2E764CAE00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7340EA6D2E764CAE00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7340EA4C2E764CAD00AF70D9 /* Build configuration list for PBXProject "YKLaunchd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EA6C2E764CAE00AF70D9 /* Debug */,
+				7340EA6D2E764CAE00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7340EA692E764CAE00AF70D9 /* Build configuration list for PBXNativeTarget "YKLaunchd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EA6A2E764CAE00AF70D9 /* Debug */,
+				7340EA6B2E764CAE00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7340EA492E764CAD00AF70D9 /* Project object */;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "YKSocket",
+  "version": "1.0.0",
+  "summary": "A short description of YKSocket.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/YKP-com/YKSocket",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xiaobin liu": "liuxiaomike@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/YKP-com/YKSocket.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Classes/**/*",
+  "requires_arc": true,
+  "static_framework": true,
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "default_subspecs": "Core",
+  "frameworks": [
+    "CFNetwork",
+    "Security"
+  ],
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Classes/**.{h,m,c,cpp}"
+    }
+  ]
+}

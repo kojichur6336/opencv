@@ -1,0 +1,1030 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04B78886EB674D12AEB5E59741191C3E /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3714E721B7EB1A80D737C1FBE8F3D363 /* crc.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		080404877725AC1408C171D0810F388D /* rardefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 115845E5E6A060A6168BCF6C5E75FED8 /* rardefs.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		082C57EF7BCCEC3DAF4AE1BD810B73FD /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CBE6FA893EB37374359217B95AF469F4 /* array.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D26FCF0445D9F97E5446E027483BEB0 /* rawread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 966D1C0C2330CDCC64D475C29C718741 /* rawread.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		0ECAB56F6ED2DD70C142D549BE8CA40A /* qopen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DBFF85C1F0814303DF6706B40AEAA54 /* qopen.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		1341ECC4D8A0A83372668098A45A081A /* system.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D5D808833D2D93892AEE3E44F17091E7 /* system.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		1C4A48DFCF86E78E97D9C5FC331CECBC /* sha1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 37736FE55B6F68320CD17BC30FBD1C7C /* sha1.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		1C7A627C1BDF7C083F519BB56F588281 /* strlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B05366DBB284E7B5379F81DACB1532E /* strlist.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		1D7A6A4DCC574C9EECB900FBE0877998 /* filefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F0AEC2D88E045806380E95C592A9CFDC /* filefn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		2039D74C1EEF845EC313E501CD1C49BF /* recvol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CF561B29956B473151812949011BA378 /* recvol.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		203D2E84D5719E1D40A2ABA97B5A7D2F /* Pods-YKRarKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8232EA8A2AB25DF186438F35FC0C9016 /* Pods-YKRarKit_Example-dummy.m */; };
+		2396389D0E98474774FF90260453ADB3 /* YKRarKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FF48A400A12487787F0E9E3C702C41 /* YKRarKit-dummy.m */; };
+		2680B5786B649DCCAE5FE3EE0D8B5E2D /* extinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BFA6B070B05B65DDD0E3E60DD3963 /* extinfo.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		2C9FF204D55EB8DC9578DFFBE7FBF346 /* qopen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 93F323ED6D89EC3F11A752290719D81A /* qopen.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DA90CD6254A95A3068255E921802B90 /* crc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4509F6C312A4D1C437ECC1EAE87B1E0B /* crc.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E4749150C55D780B227E7A261B27650 /* extinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D1346DEBE151554A839400DDA6017D44 /* extinfo.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		31638625D5E0F34670CB9717F610B04E /* consio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D82E8E9D59E3720C87A086FB307C3D8 /* consio.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		336C51B2C5A85CBDEE4BEAC6D8CCE72B /* NSString+UnrarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CC8290FDFA15A14805195F3120B74B74 /* NSString+UnrarKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37E825FBF1BB5DBB9CC48B2A3366D099 /* log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5C15D0702B70D1B6EA41BF36E7059220 /* log.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		385FAE22B74B668A70DD9C27EF4CE08E /* blake2s.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7A36D454428443399383CB760379EA25 /* blake2s.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3AAD6BA98F702A035DF0966658FCE99E /* find.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2C4B219515E8E6307AF4E5F6CFF89084 /* find.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B3817C95D099B2CD3A159C0335B18BA /* UnrarKitMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 630893FDB778FB747B6F274A4E519032 /* UnrarKitMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3C4B4BB34BCB532151DB4FB464148E62 /* pathfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C112AFDC7DAF480B8FEB6B4E9DD28E8 /* pathfn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		3CC2BDFF93D2A09581D60944345B1E3E /* rawread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BEC8F38CF2F5D1A3C10C0AD79F257E78 /* rawread.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3CC5F8242E6473C97EC58D0283A2AA08 /* rarvm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 407459FF8A7B1FEF97E3B0B52DBE44FC /* rarvm.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3CF2D9A7B330E493F60E03F2B888EE71 /* suballoc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2B32BB5FE0B5815833BB7809487183DA /* suballoc.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DEE30D56221211990A78A54EA9D0307 /* headers5.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4EFCCBF4CDF6A32F58DC91A5CD1DB97B /* headers5.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		3ED944FCA0701951E514CC9E34CF0771 /* find.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A09BFEA8AEEE6FBA54D0D507A712 /* find.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		3F561D9F9B35B906891773D3085F7FD7 /* options.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 040AD91473DE4F015D4E1266E3C009AD /* options.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		4698451BE8D9A8DAA753EBD9E6BF4803 /* dll.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9D8F75DABCF836D38DA8C495020E5D6 /* dll.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		495C1E48079BAC813FAE0C9F0B0E0482 /* UnrarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AED02D1A6E153EBDE0D6824335B16DF0 /* UnrarKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4C55BBFF3EA445DB707FA40CEA5F5E3F /* timefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700F7E74ECC54C42047989F974277E9 /* timefn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		4EA9EBE590C46D3F90C9E948CDDF4D21 /* errhnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CB2253DCEDE9CB122140B26393E507 /* errhnd.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		4F07F932E009CB4075FCCD0C6784398D /* raros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F8DB51BA24ED9EE20701416BCD16A8AA /* raros.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		50A6BDBBB181F5BEC9AAE4FD2A26BA72 /* rijndael.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F68BE0475AFB709E3954495338FF13A7 /* rijndael.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		516D7AC6AA0B98E3D3D5EF6028ADBA9D /* rawint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C6B69ACA64EAD686E4D26546DFA8807 /* rawint.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		528601D4701774074A55AADA2C8F98B1 /* filcreat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0938BF63ADE3EED012BBEF52D6DA7832 /* filcreat.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		55937E5658380F28E8B3E12991D75EDE /* rijndael.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A64889E2FAE3704B1825C442F4333A5 /* rijndael.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		560BD600CCEA3E29DE779AFBF85464C1 /* resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA6B94367444A725CB74455F023FAEDF /* resource.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		576196D780D801F01577E1886F4C14FA /* filestr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BA96A202BE5B2A3EBEE9FF96BB4D8 /* filestr.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		5B03C17CEEED139D0BA22277319D06FF /* os.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5100C29E3169E9FB8D606A3A1FCAC1AF /* os.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CBDB0E60C2E8ACA5B4502F6204C5C42 /* rs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BC9FE31499D3559A175F52B4BB9669E /* rs.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		615AD822BED10B018673559B4548EFDF /* ui.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65D08C25EE842B8C02BA63E0B16A3C2E /* ui.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		62162826BE2902BCE277EDD932722223 /* filcreat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5B6B3CB0AA0308410188F27671B51 /* filcreat.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		67BB3BB51F2022D142CD150F1FED4453 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BD9A516B18EFB5093E1D74B7BA14FF /* list.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		699B640759B5A930C50BE21871009B10 /* secpassword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB64B3260891BA1154F3A8BBEFEA7F90 /* secpassword.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		69DAAD3DD515BAE3E9DE0771B80A4220 /* file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E39DDC328212E97C1620A5768DDD743 /* file.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		6B55C63542CEE338B6F4FAD07889F003 /* smallfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80BE42F2F6A2633332A8E588528B6C0D /* smallfn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		6CD0962C247E0696C782D3B6861187D2 /* cmddata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AF2A6119BF8A2C8C0D9DC6F9BAF99289 /* cmddata.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		6DBC41AE77CF4B6EDAEAA82CABD6AB4A /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40A492A26A9190093E64746BBEE35556 /* sha1.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		719E4434059FEB503401C5C030FD3586 /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0CEBD4BEB615EFF05899E64CF7D5E6 /* match.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		76097F6414B8F27E19997E5116BCC64B /* crypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AECBECE5112628F255F5C0085D73066 /* crypt.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		77866A9B6B5BDB6334DAFCE9691D2133 /* URKArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AAEDCD562153E2771598A503DA2C8A /* URKArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		77A613F06001E11573A818D5A8D0FA6A /* extract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9A76821C47F890A4E367679BFBF43FFE /* extract.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AF3F99085A8554318D9CC801550909B /* scantree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48420D0123AB3839C7379F7585B036DF /* scantree.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D4A05E7BBE9E11AB8AE472BCD7AE8BE /* compress.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 841CA160D01B1AA4FE5C876009CE4DE1 /* compress.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E9AFC49D9264648428467A9A907EDF0 /* threadpool.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 42DCDC6D447485EA144EBADFB3EE518F /* threadpool.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F6244BD7D1C03A5C693C4A1A1054770 /* volume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0660112F4FC8B6F378250CC221A1C070 /* volume.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		80B3B1A269AB4F07A4BCDC03DA0B90F8 /* strlist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 06BBB619D8C2DE477A28787ECC4C03EA /* strlist.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		83EF0C19C45CBE5D897F8DEAF242EAAF /* rs16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE49358D13C909F0D7E842170F3F1F /* rs16.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		86197CDF9C4764224FDEE1246BA6A4E7 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B5673BB5DC8B0317CFABB30EBB9C55 /* extract.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		88930753CADAEC858EC1333F044EE3DB /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B842329A3C116A3A868875E521689CB1 /* rs.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		88A3D9DD7ED987C031D5DEA4430BC6A4 /* crypt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A3421A1A6B4A17CAA1ED34462C80C202 /* crypt.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		89DA598792ED421E737DEEFD0AAFCF8C /* dll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 256B34ACD6CF03D8538AC832E7570AC9 /* dll.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		8A9EB1DD2F7ACDE35EDE456E259D5CBE /* scantree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6475AC2A072D175CB489ECF5C6081A13 /* scantree.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		8AC5C489A9BCDFA2227CCD5DBE71001D /* rarvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641D22F5ADFCBBBB6F3989C2B35A27CF /* rarvm.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		8C7FCDFC3589E1FA1F36F6FC64909168 /* URKArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = F2E6236ACAF9EFA65594D1F61373EE76 /* URKArchive.mm */; };
+		8F2F09F577B88CFDAA57EAFEDF5B59B1 /* isnt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B2849963DFE34DD3C294A89FAE99541 /* isnt.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		90E109DE5C1648732FAC06EBDA158787 /* rartypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C03FEB6ECDDC9CF837ED462594F73CE4 /* rartypes.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		929416FF3B55AC5E99EE73AA5563522F /* arcread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28E6DAEB7807EC5F3BA19F676D76E829 /* arcread.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		94C4317D0B1D9FCA90E438D832F468CB /* filestr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7A0969EFB8141D2F28935CA13DF5E471 /* filestr.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		9DE4DB84CA46885BEC05B18D25CA4136 /* sha256.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 81E7592054728B1182415250A4C6A2A6 /* sha256.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F318C56A7382E82D6AB18328D2614EC /* ui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1788879D73B658C0604351D7EB71184F /* ui.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		A02D16CFAB166E0F05AE2D30EA28874E /* resource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6D4326A8D5DDF45A18B5FDDBDA3714CA /* resource.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6530B2162285263DEBF21FF3C2D4992 /* sha256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2821A06D085A167C4A99840F7503FFDE /* sha256.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		A6B9D13BB6C04EEAFE4E88E3689E3292 /* unpack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D529A9A4AAEA2E940342FDBEF26EC69B /* unpack.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		A830C1496A1913D6D8A3875FACCA3862 /* headers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AAB57F78E880CF637F05BFF9A03AB313 /* headers.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC884EA4F06DCFF286C9DFBEFF764C05 /* recvol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E90A8F570F15AA461E7BC23D11E2B48F /* recvol.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		ADFDCFD55F5A925D0A772A753073B300 /* volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CA071A8DFE40594B7111AAC28C66394 /* volume.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		B23BBE76DEAE2AE8AEFCEBE0B6BE86F9 /* consio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4F0F8B59FC35945E605CDB39E8D1B86D /* consio.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		B49D13919748D43DC591877CBD9ACBAF /* match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 814C8C2C1BEAB397AD64BB201C32BCD6 /* match.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4E6A8E850293EDD8D48C55BFA1F3300 /* coder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9E2AD3B75121842DD9E1390C8F0E36BA /* coder.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4F0647EEB0025FFA0C440FE7CA32EA3 /* strfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 606ED51E3205DF6361D1EF7847CD7E51 /* strfn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA950C839BD82D6E1DFCEE07FE5CA254 /* headers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5786E1ADA5316393890F92C948E1E500 /* headers.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		BB7ECC4980FBF13C4E64C302DBF5133C /* options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79900C1E8E7955B4CB1365EB32F61E3C /* options.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		BF21D7BD387BC8B0EF7EFFE56842418A /* unicode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2066008BFD855DC3B15F085A0258A07B /* unicode.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		C078119E6C83466F36E1A220387486C7 /* NSString+UnrarKit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F5683FF85A44B781D36C8276D1D0F /* NSString+UnrarKit.mm */; };
+		C07EA9DB5958BF1DE2DEADD71751EB09 /* blake2s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AA31B871A897B6366B44A62F2937547 /* blake2s.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		C10AF8989303C03DC3D4B0C2610AFC0B /* rar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9B9EA9D67C92AFF439EB6F114906256A /* rar.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		C19C08A05A3424A7A4D023E85E62F032 /* model.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7B14218A9720AFD50040E2294C3653B8 /* model.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		C1AD44B82BD1869C95A0AEC2EAE2E36F /* rarlang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8812D75BB0AE24607C4F43964F1221EB /* rarlang.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		C3D0DD7AF89EB8572FC6E7151B657F8F /* rdwrfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E001BB5A808ECF68F15C8D5C4F41BBAA /* rdwrfn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4810D7A28093C13FBA308CB0DC43339 /* rar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74258135BA3E94CB215AF48C5E2DFB5 /* rar.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		C61385D72933F5A0010A304546036335 /* archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E142024DEC3223F8872310C45AB7B94 /* archive.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		CA5360BA26DACDFB3E2BD36ED3FD1190 /* pathfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9A6AB98F698C9E9242DBA8B12A232106 /* pathfn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB1C556378C9BA5DE670BE068E1C1ABE /* filefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93D177A4C3B835AFC9865A414157CA92 /* filefn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		CB4D35501E886B2DF706B0CF33BF4F58 /* hash.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 159EDBB7868F06E99408503882941896 /* hash.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE0BA5B949CA0276D0E71DD942D0BB93 /* errhnd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 32D40AF5B42EB46FCB1B709978AADCE3 /* errhnd.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE52ADCCEE2024DC7691678312650FA6 /* getbits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ACCD1DEB73DCB20F086B447300CE85D3 /* getbits.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFBE51F560BD025776C162B5A428E9E8 /* timefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4E85339E67574EC9460919A2C381C0E6 /* timefn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFBF2310CC5917103D354EC699E79AE3 /* strfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6183C83D666E04C5FE92353A39BB3 /* strfn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		D00B5D2BAACED91AA1F653105A8CBAA1 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0F33E17F28220A505A50EB29495B70A /* global.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		D22B0E9AE3325DB8BB5D1D0B3EB098B4 /* cmddata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC93B04EBC43FE3850D5D78B658C1C1 /* cmddata.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		D2A092ED39692A522823DBDDE77E7B73 /* secpassword.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CEC2030AEC4936EB98B03EA81894EBCE /* secpassword.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		D453590936306FEC4EB0EE98B8395883 /* system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F1CB773D8B8609359438648A23B712 /* system.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		D4D43376AB3B28D99ACFADC8AD25BC26 /* encname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE73DC9E1C0F1D034B5D3A31435E1854 /* encname.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		D88BE3CF829539D1C8FCA5B79ADA7DDF /* archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E6A331D7920AB76036D445633DBB4F18 /* archive.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		DB2142FA8D863F497DA9DEB38BD6446F /* global.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C512D87382041BF0F6F7B21ED845BC53 /* global.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		DB9A1695489F68502748CE6DADC162FA /* URKFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB06FBF013A1B56F333A03596AF925 /* URKFileInfo.m */; };
+		DF9B16EE4C8E3D3B0CDC3BAD2DCBBEB0 /* unpack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 634CB11EBE2E4C8A2C2521E3481CB62C /* unpack.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		E194F800AFC92F4A20180D54D56C79E3 /* file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 478AFA2726FDEEBE496552193A46B159 /* file.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		E65561A5A4C80FAB019D392E76643FB1 /* getbits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA50B2AAB1FAF1F05522C9037C15FE9 /* getbits.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		E948B975B6E86587ED45E3F122C47057 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 818919CA3D19CCEFFB237A2193953A03 /* unicode.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		F01B504957ADB18F70C7FB35BB45B8C0 /* encname.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C2622A25022AD1A9EC5040883F15068 /* encname.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		F109B64D6FD38C661568E3E445431BB7 /* rs16.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0BE164EDA3C239FC01FBA9547B9A0F06 /* rs16.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		F1CB3E92581AC89CCF4776CCE3A44C5B /* threadpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C4EDB206734FD8CD50C31B62816D6C /* threadpool.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		F24C9C8CB68AD5765E4CE2F956DDD61B /* hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 668482EFECAA9D0EBB23313CBAE5D5A7 /* hash.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+		F4F35D7487591F639B43EFB85FC08793 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4DCA2929A96E0B82849AA56EA49036A7 /* version.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		F604E4A5F43608B0DAC8AC97103EFF18 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9E035E8964C42E786795BF406DEB5B86 /* list.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		F740099550DDEC719584D6A4C3C2E6B1 /* loclang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8BFA48F89FFADC35C744BDE664EEBF7A /* loclang.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA375D9D9F426FF2B105779CF4539E51 /* smallfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 439568F338F86940684ED1810B60868D /* smallfn.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA5E2A71C70F5EAF7D33267ECBB189D6 /* URKFileInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 75227B91C247E0DC4A7766A3FCBB509C /* URKFileInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE1E18D76C5DA80CE737838D439405CE /* rdwrfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980316D0A499503B2165BC2EA88BCF30 /* rdwrfn.cpp */; settings = {COMPILER_FLAGS = "-Xanalyzer -analyzer-disable-all-checks -fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		803E324106B80BF876364417779D38E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3E839C05A60346E03EE88BB7E744002;
+			remoteInfo = YKRarKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040AD91473DE4F015D4E1266E3C009AD /* options.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = options.hpp; path = Libraries/unrar/options.hpp; sourceTree = "<group>"; };
+		0660112F4FC8B6F378250CC221A1C070 /* volume.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = volume.hpp; path = Libraries/unrar/volume.hpp; sourceTree = "<group>"; };
+		06BBB619D8C2DE477A28787ECC4C03EA /* strlist.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = strlist.hpp; path = Libraries/unrar/strlist.hpp; sourceTree = "<group>"; };
+		0700F7E74ECC54C42047989F974277E9 /* timefn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = timefn.cpp; path = Libraries/unrar/timefn.cpp; sourceTree = "<group>"; };
+		0938BF63ADE3EED012BBEF52D6DA7832 /* filcreat.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = filcreat.hpp; path = Libraries/unrar/filcreat.hpp; sourceTree = "<group>"; };
+		0BE164EDA3C239FC01FBA9547B9A0F06 /* rs16.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rs16.hpp; path = Libraries/unrar/rs16.hpp; sourceTree = "<group>"; };
+		0C2622A25022AD1A9EC5040883F15068 /* encname.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = encname.hpp; path = Libraries/unrar/encname.hpp; sourceTree = "<group>"; };
+		115845E5E6A060A6168BCF6C5E75FED8 /* rardefs.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rardefs.hpp; path = Libraries/unrar/rardefs.hpp; sourceTree = "<group>"; };
+		159EDBB7868F06E99408503882941896 /* hash.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = hash.hpp; path = Libraries/unrar/hash.hpp; sourceTree = "<group>"; };
+		1788879D73B658C0604351D7EB71184F /* ui.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ui.cpp; path = Libraries/unrar/ui.cpp; sourceTree = "<group>"; };
+		1B05366DBB284E7B5379F81DACB1532E /* strlist.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = strlist.cpp; path = Libraries/unrar/strlist.cpp; sourceTree = "<group>"; };
+		1C6B69ACA64EAD686E4D26546DFA8807 /* rawint.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rawint.hpp; path = Libraries/unrar/rawint.hpp; sourceTree = "<group>"; };
+		1CA071A8DFE40594B7111AAC28C66394 /* volume.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = volume.cpp; path = Libraries/unrar/volume.cpp; sourceTree = "<group>"; };
+		1D82E8E9D59E3720C87A086FB307C3D8 /* consio.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = consio.cpp; path = Libraries/unrar/consio.cpp; sourceTree = "<group>"; };
+		2066008BFD855DC3B15F085A0258A07B /* unicode.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = unicode.hpp; path = Libraries/unrar/unicode.hpp; sourceTree = "<group>"; };
+		2450E5B87D697398FA6F69D49F2FF264 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		256B34ACD6CF03D8538AC832E7570AC9 /* dll.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = dll.cpp; path = Libraries/unrar/dll.cpp; sourceTree = "<group>"; };
+		27C4EDB206734FD8CD50C31B62816D6C /* threadpool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = threadpool.cpp; path = Libraries/unrar/threadpool.cpp; sourceTree = "<group>"; };
+		2821A06D085A167C4A99840F7503FFDE /* sha256.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sha256.cpp; path = Libraries/unrar/sha256.cpp; sourceTree = "<group>"; };
+		28E6DAEB7807EC5F3BA19F676D76E829 /* arcread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = arcread.cpp; path = Libraries/unrar/arcread.cpp; sourceTree = "<group>"; };
+		2B32BB5FE0B5815833BB7809487183DA /* suballoc.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = suballoc.hpp; path = Libraries/unrar/suballoc.hpp; sourceTree = "<group>"; };
+		2C4B219515E8E6307AF4E5F6CFF89084 /* find.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = find.hpp; path = Libraries/unrar/find.hpp; sourceTree = "<group>"; };
+		2E39DDC328212E97C1620A5768DDD743 /* file.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = file.cpp; path = Libraries/unrar/file.cpp; sourceTree = "<group>"; };
+		32D40AF5B42EB46FCB1B709978AADCE3 /* errhnd.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = errhnd.hpp; path = Libraries/unrar/errhnd.hpp; sourceTree = "<group>"; };
+		3714E721B7EB1A80D737C1FBE8F3D363 /* crc.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = crc.cpp; path = Libraries/unrar/crc.cpp; sourceTree = "<group>"; };
+		37736FE55B6F68320CD17BC30FBD1C7C /* sha1.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = sha1.hpp; path = Libraries/unrar/sha1.hpp; sourceTree = "<group>"; };
+		3D6F5683FF85A44B781D36C8276D1D0F /* NSString+UnrarKit.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = "NSString+UnrarKit.mm"; sourceTree = "<group>"; };
+		3E169A5ED028B09084AA89E3D5C61268 /* YKRarKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YKRarKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3EAB06FBF013A1B56F333A03596AF925 /* URKFileInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URKFileInfo.m; path = Classes/URKFileInfo.m; sourceTree = "<group>"; };
+		407459FF8A7B1FEF97E3B0B52DBE44FC /* rarvm.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rarvm.hpp; path = Libraries/unrar/rarvm.hpp; sourceTree = "<group>"; };
+		40A492A26A9190093E64746BBEE35556 /* sha1.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sha1.cpp; path = Libraries/unrar/sha1.cpp; sourceTree = "<group>"; };
+		4299ED689E3C423F88D7CA4E14D08436 /* YKRarKit */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = YKRarKit; path = libYKRarKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		42DCDC6D447485EA144EBADFB3EE518F /* threadpool.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = threadpool.hpp; path = Libraries/unrar/threadpool.hpp; sourceTree = "<group>"; };
+		439568F338F86940684ED1810B60868D /* smallfn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = smallfn.hpp; path = Libraries/unrar/smallfn.hpp; sourceTree = "<group>"; };
+		4509F6C312A4D1C437ECC1EAE87B1E0B /* crc.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = crc.hpp; path = Libraries/unrar/crc.hpp; sourceTree = "<group>"; };
+		45F1CB773D8B8609359438648A23B712 /* system.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = system.cpp; path = Libraries/unrar/system.cpp; sourceTree = "<group>"; };
+		478AFA2726FDEEBE496552193A46B159 /* file.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = file.hpp; path = Libraries/unrar/file.hpp; sourceTree = "<group>"; };
+		48420D0123AB3839C7379F7585B036DF /* scantree.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = scantree.hpp; path = Libraries/unrar/scantree.hpp; sourceTree = "<group>"; };
+		4ABECEC7A9B7D8001CA7474D5D1F7639 /* Pods-YKRarKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YKRarKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4B2849963DFE34DD3C294A89FAE99541 /* isnt.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = isnt.hpp; path = Libraries/unrar/isnt.hpp; sourceTree = "<group>"; };
+		4C112AFDC7DAF480B8FEB6B4E9DD28E8 /* pathfn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = pathfn.cpp; path = Libraries/unrar/pathfn.cpp; sourceTree = "<group>"; };
+		4DCA2929A96E0B82849AA56EA49036A7 /* version.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = version.hpp; path = Libraries/unrar/version.hpp; sourceTree = "<group>"; };
+		4E85339E67574EC9460919A2C381C0E6 /* timefn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = timefn.hpp; path = Libraries/unrar/timefn.hpp; sourceTree = "<group>"; };
+		4EFCCBF4CDF6A32F58DC91A5CD1DB97B /* headers5.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = headers5.hpp; path = Libraries/unrar/headers5.hpp; sourceTree = "<group>"; };
+		4F0F8B59FC35945E605CDB39E8D1B86D /* consio.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = consio.hpp; path = Libraries/unrar/consio.hpp; sourceTree = "<group>"; };
+		5100C29E3169E9FB8D606A3A1FCAC1AF /* os.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = os.hpp; path = Libraries/unrar/os.hpp; sourceTree = "<group>"; };
+		527D099225908782891FE16AFFCC26CC /* YKRarKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YKRarKit.debug.xcconfig; sourceTree = "<group>"; };
+		5786E1ADA5316393890F92C948E1E500 /* headers.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = headers.cpp; path = Libraries/unrar/headers.cpp; sourceTree = "<group>"; };
+		5BC9FE31499D3559A175F52B4BB9669E /* rs.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rs.cpp; path = Libraries/unrar/rs.cpp; sourceTree = "<group>"; };
+		5C15D0702B70D1B6EA41BF36E7059220 /* log.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = log.hpp; path = Libraries/unrar/log.hpp; sourceTree = "<group>"; };
+		5ECE49358D13C909F0D7E842170F3F1F /* rs16.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rs16.cpp; path = Libraries/unrar/rs16.cpp; sourceTree = "<group>"; };
+		606ED51E3205DF6361D1EF7847CD7E51 /* strfn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = strfn.hpp; path = Libraries/unrar/strfn.hpp; sourceTree = "<group>"; };
+		630893FDB778FB747B6F274A4E519032 /* UnrarKitMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnrarKitMacros.h; path = Classes/UnrarKitMacros.h; sourceTree = "<group>"; };
+		634CB11EBE2E4C8A2C2521E3481CB62C /* unpack.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = unpack.cpp; path = Libraries/unrar/unpack.cpp; sourceTree = "<group>"; };
+		641D22F5ADFCBBBB6F3989C2B35A27CF /* rarvm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rarvm.cpp; path = Libraries/unrar/rarvm.cpp; sourceTree = "<group>"; };
+		6475AC2A072D175CB489ECF5C6081A13 /* scantree.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = scantree.cpp; path = Libraries/unrar/scantree.cpp; sourceTree = "<group>"; };
+		65D08C25EE842B8C02BA63E0B16A3C2E /* ui.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = ui.hpp; path = Libraries/unrar/ui.hpp; sourceTree = "<group>"; };
+		668482EFECAA9D0EBB23313CBAE5D5A7 /* hash.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = hash.cpp; path = Libraries/unrar/hash.cpp; sourceTree = "<group>"; };
+		6AECBECE5112628F255F5C0085D73066 /* crypt.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = crypt.cpp; path = Libraries/unrar/crypt.cpp; sourceTree = "<group>"; };
+		6B68D4F6B578A6FE826806030723D13E /* Pods-YKRarKit_Example */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-YKRarKit_Example"; path = "libPods-YKRarKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4326A8D5DDF45A18B5FDDBDA3714CA /* resource.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = resource.hpp; path = Libraries/unrar/resource.hpp; sourceTree = "<group>"; };
+		6DA50B2AAB1FAF1F05522C9037C15FE9 /* getbits.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = getbits.cpp; path = Libraries/unrar/getbits.cpp; sourceTree = "<group>"; };
+		6DBFF85C1F0814303DF6706B40AEAA54 /* qopen.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = qopen.cpp; path = Libraries/unrar/qopen.cpp; sourceTree = "<group>"; };
+		6EF7DB629E19EF82BF21488D9EC1F008 /* YKRarKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YKRarKit.release.xcconfig; sourceTree = "<group>"; };
+		6F6BA96A202BE5B2A3EBEE9FF96BB4D8 /* filestr.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filestr.cpp; path = Libraries/unrar/filestr.cpp; sourceTree = "<group>"; };
+		75227B91C247E0DC4A7766A3FCBB509C /* URKFileInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URKFileInfo.h; path = Classes/URKFileInfo.h; sourceTree = "<group>"; };
+		79900C1E8E7955B4CB1365EB32F61E3C /* options.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = options.cpp; path = Libraries/unrar/options.cpp; sourceTree = "<group>"; };
+		7A0969EFB8141D2F28935CA13DF5E471 /* filestr.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = filestr.hpp; path = Libraries/unrar/filestr.hpp; sourceTree = "<group>"; };
+		7A36D454428443399383CB760379EA25 /* blake2s.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = blake2s.hpp; path = Libraries/unrar/blake2s.hpp; sourceTree = "<group>"; };
+		7B14218A9720AFD50040E2294C3653B8 /* model.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = model.hpp; path = Libraries/unrar/model.hpp; sourceTree = "<group>"; };
+		7E142024DEC3223F8872310C45AB7B94 /* archive.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = Libraries/unrar/archive.cpp; sourceTree = "<group>"; };
+		7FB5B6B3CB0AA0308410188F27671B51 /* filcreat.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filcreat.cpp; path = Libraries/unrar/filcreat.cpp; sourceTree = "<group>"; };
+		80BE42F2F6A2633332A8E588528B6C0D /* smallfn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = smallfn.cpp; path = Libraries/unrar/smallfn.cpp; sourceTree = "<group>"; };
+		814C8C2C1BEAB397AD64BB201C32BCD6 /* match.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = match.hpp; path = Libraries/unrar/match.hpp; sourceTree = "<group>"; };
+		818919CA3D19CCEFFB237A2193953A03 /* unicode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = unicode.cpp; path = Libraries/unrar/unicode.cpp; sourceTree = "<group>"; };
+		81E7592054728B1182415250A4C6A2A6 /* sha256.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = sha256.hpp; path = Libraries/unrar/sha256.hpp; sourceTree = "<group>"; };
+		8232EA8A2AB25DF186438F35FC0C9016 /* Pods-YKRarKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YKRarKit_Example-dummy.m"; sourceTree = "<group>"; };
+		841CA160D01B1AA4FE5C876009CE4DE1 /* compress.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = compress.hpp; path = Libraries/unrar/compress.hpp; sourceTree = "<group>"; };
+		84FF48A400A12487787F0E9E3C702C41 /* YKRarKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YKRarKit-dummy.m"; sourceTree = "<group>"; };
+		85AAEDCD562153E2771598A503DA2C8A /* URKArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URKArchive.h; path = Classes/URKArchive.h; sourceTree = "<group>"; };
+		8812D75BB0AE24607C4F43964F1221EB /* rarlang.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rarlang.hpp; path = Libraries/unrar/rarlang.hpp; sourceTree = "<group>"; };
+		8A64889E2FAE3704B1825C442F4333A5 /* rijndael.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rijndael.hpp; path = Libraries/unrar/rijndael.hpp; sourceTree = "<group>"; };
+		8AA31B871A897B6366B44A62F2937547 /* blake2s.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = blake2s.cpp; path = Libraries/unrar/blake2s.cpp; sourceTree = "<group>"; };
+		8BFA48F89FFADC35C744BDE664EEBF7A /* loclang.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = loclang.hpp; path = Libraries/unrar/loclang.hpp; sourceTree = "<group>"; };
+		93D177A4C3B835AFC9865A414157CA92 /* filefn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filefn.cpp; path = Libraries/unrar/filefn.cpp; sourceTree = "<group>"; };
+		93F323ED6D89EC3F11A752290719D81A /* qopen.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = qopen.hpp; path = Libraries/unrar/qopen.hpp; sourceTree = "<group>"; };
+		966D1C0C2330CDCC64D475C29C718741 /* rawread.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rawread.cpp; path = Libraries/unrar/rawread.cpp; sourceTree = "<group>"; };
+		980316D0A499503B2165BC2EA88BCF30 /* rdwrfn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rdwrfn.cpp; path = Libraries/unrar/rdwrfn.cpp; sourceTree = "<group>"; };
+		98AFEA3D41D9E3CED5230775657E9471 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9A3BFA6B070B05B65DDD0E3E60DD3963 /* extinfo.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = extinfo.cpp; path = Libraries/unrar/extinfo.cpp; sourceTree = "<group>"; };
+		9A6AB98F698C9E9242DBA8B12A232106 /* pathfn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = pathfn.hpp; path = Libraries/unrar/pathfn.hpp; sourceTree = "<group>"; };
+		9A76821C47F890A4E367679BFBF43FFE /* extract.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = extract.hpp; path = Libraries/unrar/extract.hpp; sourceTree = "<group>"; };
+		9B9EA9D67C92AFF439EB6F114906256A /* rar.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rar.hpp; path = Libraries/unrar/rar.hpp; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E035E8964C42E786795BF406DEB5B86 /* list.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = list.hpp; path = Libraries/unrar/list.hpp; sourceTree = "<group>"; };
+		9E2AD3B75121842DD9E1390C8F0E36BA /* coder.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = coder.hpp; path = Libraries/unrar/coder.hpp; sourceTree = "<group>"; };
+		9FB6183C83D666E04C5FE92353A39BB3 /* strfn.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = strfn.cpp; path = Libraries/unrar/strfn.cpp; sourceTree = "<group>"; };
+		A0F33E17F28220A505A50EB29495B70A /* global.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = global.cpp; path = Libraries/unrar/global.cpp; sourceTree = "<group>"; };
+		A3421A1A6B4A17CAA1ED34462C80C202 /* crypt.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = crypt.hpp; path = Libraries/unrar/crypt.hpp; sourceTree = "<group>"; };
+		A7B5673BB5DC8B0317CFABB30EBB9C55 /* extract.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = extract.cpp; path = Libraries/unrar/extract.cpp; sourceTree = "<group>"; };
+		A7DB6307795259CDD41ADD86E6FFFDEC /* Pods-YKRarKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YKRarKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA6B94367444A725CB74455F023FAEDF /* resource.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = resource.cpp; path = Libraries/unrar/resource.cpp; sourceTree = "<group>"; };
+		AAB57F78E880CF637F05BFF9A03AB313 /* headers.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = headers.hpp; path = Libraries/unrar/headers.hpp; sourceTree = "<group>"; };
+		ACCD1DEB73DCB20F086B447300CE85D3 /* getbits.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = getbits.hpp; path = Libraries/unrar/getbits.hpp; sourceTree = "<group>"; };
+		AED02D1A6E153EBDE0D6824335B16DF0 /* UnrarKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnrarKit.h; path = Classes/UnrarKit.h; sourceTree = "<group>"; };
+		AF2A6119BF8A2C8C0D9DC6F9BAF99289 /* cmddata.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = cmddata.hpp; path = Libraries/unrar/cmddata.hpp; sourceTree = "<group>"; };
+		B1BD9A516B18EFB5093E1D74B7BA14FF /* list.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = list.cpp; path = Libraries/unrar/list.cpp; sourceTree = "<group>"; };
+		B842329A3C116A3A868875E521689CB1 /* rs.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rs.hpp; path = Libraries/unrar/rs.hpp; sourceTree = "<group>"; };
+		BE0CEBD4BEB615EFF05899E64CF7D5E6 /* match.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = match.cpp; path = Libraries/unrar/match.cpp; sourceTree = "<group>"; };
+		BEC8F38CF2F5D1A3C10C0AD79F257E78 /* rawread.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rawread.hpp; path = Libraries/unrar/rawread.hpp; sourceTree = "<group>"; };
+		C03FEB6ECDDC9CF837ED462594F73CE4 /* rartypes.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rartypes.hpp; path = Libraries/unrar/rartypes.hpp; sourceTree = "<group>"; };
+		C39575E0E46C8A89F57F190430E703F0 /* Pods-YKRarKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKRarKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C512D87382041BF0F6F7B21ED845BC53 /* global.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = global.hpp; path = Libraries/unrar/global.hpp; sourceTree = "<group>"; };
+		C549C502551338270CFB5827EC3CA9F6 /* Pods-YKRarKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKRarKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CBE6FA893EB37374359217B95AF469F4 /* array.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = array.hpp; path = Libraries/unrar/array.hpp; sourceTree = "<group>"; };
+		CC8290FDFA15A14805195F3120B74B74 /* NSString+UnrarKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+UnrarKit.h"; sourceTree = "<group>"; };
+		CEC2030AEC4936EB98B03EA81894EBCE /* secpassword.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = secpassword.hpp; path = Libraries/unrar/secpassword.hpp; sourceTree = "<group>"; };
+		CF561B29956B473151812949011BA378 /* recvol.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = recvol.hpp; path = Libraries/unrar/recvol.hpp; sourceTree = "<group>"; };
+		D1346DEBE151554A839400DDA6017D44 /* extinfo.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = extinfo.hpp; path = Libraries/unrar/extinfo.hpp; sourceTree = "<group>"; };
+		D13E170C7A54BADD8F4BF5DBE87D34BA /* YKRarKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YKRarKit-prefix.pch"; sourceTree = "<group>"; };
+		D529A9A4AAEA2E940342FDBEF26EC69B /* unpack.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = unpack.hpp; path = Libraries/unrar/unpack.hpp; sourceTree = "<group>"; };
+		D5D808833D2D93892AEE3E44F17091E7 /* system.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = system.hpp; path = Libraries/unrar/system.hpp; sourceTree = "<group>"; };
+		D8F9A09BFEA8AEEE6FBA54D0D507A712 /* find.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = find.cpp; path = Libraries/unrar/find.cpp; sourceTree = "<group>"; };
+		DCC93B04EBC43FE3850D5D78B658C1C1 /* cmddata.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = cmddata.cpp; path = Libraries/unrar/cmddata.cpp; sourceTree = "<group>"; };
+		DE73DC9E1C0F1D034B5D3A31435E1854 /* encname.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = encname.cpp; path = Libraries/unrar/encname.cpp; sourceTree = "<group>"; };
+		E001BB5A808ECF68F15C8D5C4F41BBAA /* rdwrfn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = rdwrfn.hpp; path = Libraries/unrar/rdwrfn.hpp; sourceTree = "<group>"; };
+		E2CB2253DCEDE9CB122140B26393E507 /* errhnd.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = errhnd.cpp; path = Libraries/unrar/errhnd.cpp; sourceTree = "<group>"; };
+		E6A331D7920AB76036D445633DBB4F18 /* archive.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = Libraries/unrar/archive.hpp; sourceTree = "<group>"; };
+		E90A8F570F15AA461E7BC23D11E2B48F /* recvol.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = recvol.cpp; path = Libraries/unrar/recvol.cpp; sourceTree = "<group>"; };
+		E9D8F75DABCF836D38DA8C495020E5D6 /* dll.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = dll.hpp; path = Libraries/unrar/dll.hpp; sourceTree = "<group>"; };
+		EB64B3260891BA1154F3A8BBEFEA7F90 /* secpassword.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = secpassword.cpp; path = Libraries/unrar/secpassword.cpp; sourceTree = "<group>"; };
+		F0AEC2D88E045806380E95C592A9CFDC /* filefn.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = filefn.hpp; path = Libraries/unrar/filefn.hpp; sourceTree = "<group>"; };
+		F2E6236ACAF9EFA65594D1F61373EE76 /* URKArchive.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = URKArchive.mm; path = Classes/URKArchive.mm; sourceTree = "<group>"; };
+		F68BE0475AFB709E3954495338FF13A7 /* rijndael.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rijndael.cpp; path = Libraries/unrar/rijndael.cpp; sourceTree = "<group>"; };
+		F74258135BA3E94CB215AF48C5E2DFB5 /* rar.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = rar.cpp; path = Libraries/unrar/rar.cpp; sourceTree = "<group>"; };
+		F8DB51BA24ED9EE20701416BCD16A8AA /* raros.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = raros.hpp; path = Libraries/unrar/raros.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D5631544594EC0FE0DAD8808AE00E4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F555A97F0BD8DE2D91BB2D01FAF6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EBC061ED9EBE88E0119D7A2FCE3F4B8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5521AC9DC1E045F4F02BD4D5E0B00D4 /* YKRarKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		105B03B60A023445A507F501B925170F /* Pods-YKRarKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				A7DB6307795259CDD41ADD86E6FFFDEC /* Pods-YKRarKit_Example-acknowledgements.markdown */,
+				4ABECEC7A9B7D8001CA7474D5D1F7639 /* Pods-YKRarKit_Example-acknowledgements.plist */,
+				8232EA8A2AB25DF186438F35FC0C9016 /* Pods-YKRarKit_Example-dummy.m */,
+				C549C502551338270CFB5827EC3CA9F6 /* Pods-YKRarKit_Example.debug.xcconfig */,
+				C39575E0E46C8A89F57F190430E703F0 /* Pods-YKRarKit_Example.release.xcconfig */,
+			);
+			name = "Pods-YKRarKit_Example";
+			path = "Target Support Files/Pods-YKRarKit_Example";
+			sourceTree = "<group>";
+		};
+		6199DE5F3E43DF6973B0E6E238900DD5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				105B03B60A023445A507F501B925170F /* Pods-YKRarKit_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8720E08AD968E96B39E8BDA142184CB9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CC8290FDFA15A14805195F3120B74B74 /* NSString+UnrarKit.h */,
+				3D6F5683FF85A44B781D36C8276D1D0F /* NSString+UnrarKit.mm */,
+			);
+			name = Categories;
+			path = Classes/Categories;
+			sourceTree = "<group>";
+		};
+		99363A931800D968A3D2C449BC6BBF5E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84FF48A400A12487787F0E9E3C702C41 /* YKRarKit-dummy.m */,
+				D13E170C7A54BADD8F4BF5DBE87D34BA /* YKRarKit-prefix.pch */,
+				527D099225908782891FE16AFFCC26CC /* YKRarKit.debug.xcconfig */,
+				6EF7DB629E19EF82BF21488D9EC1F008 /* YKRarKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YKRarKit";
+			sourceTree = "<group>";
+		};
+		9E485C40DE4903F60A2641930DF320C4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				98AFEA3D41D9E3CED5230775657E9471 /* LICENSE */,
+				2450E5B87D697398FA6F69D49F2FF264 /* README.md */,
+				3E169A5ED028B09084AA89E3D5C61268 /* YKRarKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A5521AC9DC1E045F4F02BD4D5E0B00D4 /* YKRarKit */ = {
+			isa = PBXGroup;
+			children = (
+				AED02D1A6E153EBDE0D6824335B16DF0 /* UnrarKit.h */,
+				630893FDB778FB747B6F274A4E519032 /* UnrarKitMacros.h */,
+				85AAEDCD562153E2771598A503DA2C8A /* URKArchive.h */,
+				F2E6236ACAF9EFA65594D1F61373EE76 /* URKArchive.mm */,
+				75227B91C247E0DC4A7766A3FCBB509C /* URKFileInfo.h */,
+				3EAB06FBF013A1B56F333A03596AF925 /* URKFileInfo.m */,
+				8720E08AD968E96B39E8BDA142184CB9 /* Categories */,
+				9E485C40DE4903F60A2641930DF320C4 /* Pod */,
+				99363A931800D968A3D2C449BC6BBF5E /* Support Files */,
+				B7C34E61A2F749AC722F7FA4B5FF1B0E /* unrar-lib */,
+			);
+			name = YKRarKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B7C34E61A2F749AC722F7FA4B5FF1B0E /* unrar-lib */ = {
+			isa = PBXGroup;
+			children = (
+				7E142024DEC3223F8872310C45AB7B94 /* archive.cpp */,
+				E6A331D7920AB76036D445633DBB4F18 /* archive.hpp */,
+				28E6DAEB7807EC5F3BA19F676D76E829 /* arcread.cpp */,
+				CBE6FA893EB37374359217B95AF469F4 /* array.hpp */,
+				8AA31B871A897B6366B44A62F2937547 /* blake2s.cpp */,
+				7A36D454428443399383CB760379EA25 /* blake2s.hpp */,
+				DCC93B04EBC43FE3850D5D78B658C1C1 /* cmddata.cpp */,
+				AF2A6119BF8A2C8C0D9DC6F9BAF99289 /* cmddata.hpp */,
+				9E2AD3B75121842DD9E1390C8F0E36BA /* coder.hpp */,
+				841CA160D01B1AA4FE5C876009CE4DE1 /* compress.hpp */,
+				1D82E8E9D59E3720C87A086FB307C3D8 /* consio.cpp */,
+				4F0F8B59FC35945E605CDB39E8D1B86D /* consio.hpp */,
+				3714E721B7EB1A80D737C1FBE8F3D363 /* crc.cpp */,
+				4509F6C312A4D1C437ECC1EAE87B1E0B /* crc.hpp */,
+				6AECBECE5112628F255F5C0085D73066 /* crypt.cpp */,
+				A3421A1A6B4A17CAA1ED34462C80C202 /* crypt.hpp */,
+				256B34ACD6CF03D8538AC832E7570AC9 /* dll.cpp */,
+				E9D8F75DABCF836D38DA8C495020E5D6 /* dll.hpp */,
+				DE73DC9E1C0F1D034B5D3A31435E1854 /* encname.cpp */,
+				0C2622A25022AD1A9EC5040883F15068 /* encname.hpp */,
+				E2CB2253DCEDE9CB122140B26393E507 /* errhnd.cpp */,
+				32D40AF5B42EB46FCB1B709978AADCE3 /* errhnd.hpp */,
+				9A3BFA6B070B05B65DDD0E3E60DD3963 /* extinfo.cpp */,
+				D1346DEBE151554A839400DDA6017D44 /* extinfo.hpp */,
+				A7B5673BB5DC8B0317CFABB30EBB9C55 /* extract.cpp */,
+				9A76821C47F890A4E367679BFBF43FFE /* extract.hpp */,
+				7FB5B6B3CB0AA0308410188F27671B51 /* filcreat.cpp */,
+				0938BF63ADE3EED012BBEF52D6DA7832 /* filcreat.hpp */,
+				2E39DDC328212E97C1620A5768DDD743 /* file.cpp */,
+				478AFA2726FDEEBE496552193A46B159 /* file.hpp */,
+				93D177A4C3B835AFC9865A414157CA92 /* filefn.cpp */,
+				F0AEC2D88E045806380E95C592A9CFDC /* filefn.hpp */,
+				6F6BA96A202BE5B2A3EBEE9FF96BB4D8 /* filestr.cpp */,
+				7A0969EFB8141D2F28935CA13DF5E471 /* filestr.hpp */,
+				D8F9A09BFEA8AEEE6FBA54D0D507A712 /* find.cpp */,
+				2C4B219515E8E6307AF4E5F6CFF89084 /* find.hpp */,
+				6DA50B2AAB1FAF1F05522C9037C15FE9 /* getbits.cpp */,
+				ACCD1DEB73DCB20F086B447300CE85D3 /* getbits.hpp */,
+				A0F33E17F28220A505A50EB29495B70A /* global.cpp */,
+				C512D87382041BF0F6F7B21ED845BC53 /* global.hpp */,
+				668482EFECAA9D0EBB23313CBAE5D5A7 /* hash.cpp */,
+				159EDBB7868F06E99408503882941896 /* hash.hpp */,
+				5786E1ADA5316393890F92C948E1E500 /* headers.cpp */,
+				AAB57F78E880CF637F05BFF9A03AB313 /* headers.hpp */,
+				4EFCCBF4CDF6A32F58DC91A5CD1DB97B /* headers5.hpp */,
+				4B2849963DFE34DD3C294A89FAE99541 /* isnt.hpp */,
+				B1BD9A516B18EFB5093E1D74B7BA14FF /* list.cpp */,
+				9E035E8964C42E786795BF406DEB5B86 /* list.hpp */,
+				8BFA48F89FFADC35C744BDE664EEBF7A /* loclang.hpp */,
+				5C15D0702B70D1B6EA41BF36E7059220 /* log.hpp */,
+				BE0CEBD4BEB615EFF05899E64CF7D5E6 /* match.cpp */,
+				814C8C2C1BEAB397AD64BB201C32BCD6 /* match.hpp */,
+				7B14218A9720AFD50040E2294C3653B8 /* model.hpp */,
+				79900C1E8E7955B4CB1365EB32F61E3C /* options.cpp */,
+				040AD91473DE4F015D4E1266E3C009AD /* options.hpp */,
+				5100C29E3169E9FB8D606A3A1FCAC1AF /* os.hpp */,
+				4C112AFDC7DAF480B8FEB6B4E9DD28E8 /* pathfn.cpp */,
+				9A6AB98F698C9E9242DBA8B12A232106 /* pathfn.hpp */,
+				6DBFF85C1F0814303DF6706B40AEAA54 /* qopen.cpp */,
+				93F323ED6D89EC3F11A752290719D81A /* qopen.hpp */,
+				F74258135BA3E94CB215AF48C5E2DFB5 /* rar.cpp */,
+				9B9EA9D67C92AFF439EB6F114906256A /* rar.hpp */,
+				115845E5E6A060A6168BCF6C5E75FED8 /* rardefs.hpp */,
+				8812D75BB0AE24607C4F43964F1221EB /* rarlang.hpp */,
+				F8DB51BA24ED9EE20701416BCD16A8AA /* raros.hpp */,
+				C03FEB6ECDDC9CF837ED462594F73CE4 /* rartypes.hpp */,
+				641D22F5ADFCBBBB6F3989C2B35A27CF /* rarvm.cpp */,
+				407459FF8A7B1FEF97E3B0B52DBE44FC /* rarvm.hpp */,
+				1C6B69ACA64EAD686E4D26546DFA8807 /* rawint.hpp */,
+				966D1C0C2330CDCC64D475C29C718741 /* rawread.cpp */,
+				BEC8F38CF2F5D1A3C10C0AD79F257E78 /* rawread.hpp */,
+				980316D0A499503B2165BC2EA88BCF30 /* rdwrfn.cpp */,
+				E001BB5A808ECF68F15C8D5C4F41BBAA /* rdwrfn.hpp */,
+				E90A8F570F15AA461E7BC23D11E2B48F /* recvol.cpp */,
+				CF561B29956B473151812949011BA378 /* recvol.hpp */,
+				AA6B94367444A725CB74455F023FAEDF /* resource.cpp */,
+				6D4326A8D5DDF45A18B5FDDBDA3714CA /* resource.hpp */,
+				F68BE0475AFB709E3954495338FF13A7 /* rijndael.cpp */,
+				8A64889E2FAE3704B1825C442F4333A5 /* rijndael.hpp */,
+				5BC9FE31499D3559A175F52B4BB9669E /* rs.cpp */,
+				B842329A3C116A3A868875E521689CB1 /* rs.hpp */,
+				5ECE49358D13C909F0D7E842170F3F1F /* rs16.cpp */,
+				0BE164EDA3C239FC01FBA9547B9A0F06 /* rs16.hpp */,
+				6475AC2A072D175CB489ECF5C6081A13 /* scantree.cpp */,
+				48420D0123AB3839C7379F7585B036DF /* scantree.hpp */,
+				EB64B3260891BA1154F3A8BBEFEA7F90 /* secpassword.cpp */,
+				CEC2030AEC4936EB98B03EA81894EBCE /* secpassword.hpp */,
+				40A492A26A9190093E64746BBEE35556 /* sha1.cpp */,
+				37736FE55B6F68320CD17BC30FBD1C7C /* sha1.hpp */,
+				2821A06D085A167C4A99840F7503FFDE /* sha256.cpp */,
+				81E7592054728B1182415250A4C6A2A6 /* sha256.hpp */,
+				80BE42F2F6A2633332A8E588528B6C0D /* smallfn.cpp */,
+				439568F338F86940684ED1810B60868D /* smallfn.hpp */,
+				9FB6183C83D666E04C5FE92353A39BB3 /* strfn.cpp */,
+				606ED51E3205DF6361D1EF7847CD7E51 /* strfn.hpp */,
+				1B05366DBB284E7B5379F81DACB1532E /* strlist.cpp */,
+				06BBB619D8C2DE477A28787ECC4C03EA /* strlist.hpp */,
+				2B32BB5FE0B5815833BB7809487183DA /* suballoc.hpp */,
+				45F1CB773D8B8609359438648A23B712 /* system.cpp */,
+				D5D808833D2D93892AEE3E44F17091E7 /* system.hpp */,
+				27C4EDB206734FD8CD50C31B62816D6C /* threadpool.cpp */,
+				42DCDC6D447485EA144EBADFB3EE518F /* threadpool.hpp */,
+				0700F7E74ECC54C42047989F974277E9 /* timefn.cpp */,
+				4E85339E67574EC9460919A2C381C0E6 /* timefn.hpp */,
+				1788879D73B658C0604351D7EB71184F /* ui.cpp */,
+				65D08C25EE842B8C02BA63E0B16A3C2E /* ui.hpp */,
+				818919CA3D19CCEFFB237A2193953A03 /* unicode.cpp */,
+				2066008BFD855DC3B15F085A0258A07B /* unicode.hpp */,
+				634CB11EBE2E4C8A2C2521E3481CB62C /* unpack.cpp */,
+				D529A9A4AAEA2E940342FDBEF26EC69B /* unpack.hpp */,
+				4DCA2929A96E0B82849AA56EA49036A7 /* version.hpp */,
+				1CA071A8DFE40594B7111AAC28C66394 /* volume.cpp */,
+				0660112F4FC8B6F378250CC221A1C070 /* volume.hpp */,
+			);
+			name = "unrar-lib";
+			sourceTree = "<group>";
+		};
+		B9C1095A317A81F0BEEF3C517AD6BD56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B68D4F6B578A6FE826806030723D13E /* Pods-YKRarKit_Example */,
+				4299ED689E3C423F88D7CA4E14D08436 /* YKRarKit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0EBC061ED9EBE88E0119D7A2FCE3F4B8 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				B9C1095A317A81F0BEEF3C517AD6BD56 /* Products */,
+				6199DE5F3E43DF6973B0E6E238900DD5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B5DAF1DEE9A030B9A1AADBC36969AE9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9505C0039E91244278647ACC53AD806 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88BE3CF829539D1C8FCA5B79ADA7DDF /* archive.hpp in Headers */,
+				082C57EF7BCCEC3DAF4AE1BD810B73FD /* array.hpp in Headers */,
+				385FAE22B74B668A70DD9C27EF4CE08E /* blake2s.hpp in Headers */,
+				6CD0962C247E0696C782D3B6861187D2 /* cmddata.hpp in Headers */,
+				B4E6A8E850293EDD8D48C55BFA1F3300 /* coder.hpp in Headers */,
+				7D4A05E7BBE9E11AB8AE472BCD7AE8BE /* compress.hpp in Headers */,
+				B23BBE76DEAE2AE8AEFCEBE0B6BE86F9 /* consio.hpp in Headers */,
+				2DA90CD6254A95A3068255E921802B90 /* crc.hpp in Headers */,
+				88A3D9DD7ED987C031D5DEA4430BC6A4 /* crypt.hpp in Headers */,
+				4698451BE8D9A8DAA753EBD9E6BF4803 /* dll.hpp in Headers */,
+				F01B504957ADB18F70C7FB35BB45B8C0 /* encname.hpp in Headers */,
+				CE0BA5B949CA0276D0E71DD942D0BB93 /* errhnd.hpp in Headers */,
+				2E4749150C55D780B227E7A261B27650 /* extinfo.hpp in Headers */,
+				77A613F06001E11573A818D5A8D0FA6A /* extract.hpp in Headers */,
+				528601D4701774074A55AADA2C8F98B1 /* filcreat.hpp in Headers */,
+				E194F800AFC92F4A20180D54D56C79E3 /* file.hpp in Headers */,
+				1D7A6A4DCC574C9EECB900FBE0877998 /* filefn.hpp in Headers */,
+				94C4317D0B1D9FCA90E438D832F468CB /* filestr.hpp in Headers */,
+				3AAD6BA98F702A035DF0966658FCE99E /* find.hpp in Headers */,
+				CE52ADCCEE2024DC7691678312650FA6 /* getbits.hpp in Headers */,
+				DB2142FA8D863F497DA9DEB38BD6446F /* global.hpp in Headers */,
+				CB4D35501E886B2DF706B0CF33BF4F58 /* hash.hpp in Headers */,
+				A830C1496A1913D6D8A3875FACCA3862 /* headers.hpp in Headers */,
+				3DEE30D56221211990A78A54EA9D0307 /* headers5.hpp in Headers */,
+				8F2F09F577B88CFDAA57EAFEDF5B59B1 /* isnt.hpp in Headers */,
+				F604E4A5F43608B0DAC8AC97103EFF18 /* list.hpp in Headers */,
+				F740099550DDEC719584D6A4C3C2E6B1 /* loclang.hpp in Headers */,
+				37E825FBF1BB5DBB9CC48B2A3366D099 /* log.hpp in Headers */,
+				B49D13919748D43DC591877CBD9ACBAF /* match.hpp in Headers */,
+				C19C08A05A3424A7A4D023E85E62F032 /* model.hpp in Headers */,
+				336C51B2C5A85CBDEE4BEAC6D8CCE72B /* NSString+UnrarKit.h in Headers */,
+				3F561D9F9B35B906891773D3085F7FD7 /* options.hpp in Headers */,
+				5B03C17CEEED139D0BA22277319D06FF /* os.hpp in Headers */,
+				CA5360BA26DACDFB3E2BD36ED3FD1190 /* pathfn.hpp in Headers */,
+				2C9FF204D55EB8DC9578DFFBE7FBF346 /* qopen.hpp in Headers */,
+				C10AF8989303C03DC3D4B0C2610AFC0B /* rar.hpp in Headers */,
+				080404877725AC1408C171D0810F388D /* rardefs.hpp in Headers */,
+				C1AD44B82BD1869C95A0AEC2EAE2E36F /* rarlang.hpp in Headers */,
+				4F07F932E009CB4075FCCD0C6784398D /* raros.hpp in Headers */,
+				90E109DE5C1648732FAC06EBDA158787 /* rartypes.hpp in Headers */,
+				3CC5F8242E6473C97EC58D0283A2AA08 /* rarvm.hpp in Headers */,
+				516D7AC6AA0B98E3D3D5EF6028ADBA9D /* rawint.hpp in Headers */,
+				3CC2BDFF93D2A09581D60944345B1E3E /* rawread.hpp in Headers */,
+				C3D0DD7AF89EB8572FC6E7151B657F8F /* rdwrfn.hpp in Headers */,
+				2039D74C1EEF845EC313E501CD1C49BF /* recvol.hpp in Headers */,
+				A02D16CFAB166E0F05AE2D30EA28874E /* resource.hpp in Headers */,
+				55937E5658380F28E8B3E12991D75EDE /* rijndael.hpp in Headers */,
+				88930753CADAEC858EC1333F044EE3DB /* rs.hpp in Headers */,
+				F109B64D6FD38C661568E3E445431BB7 /* rs16.hpp in Headers */,
+				7AF3F99085A8554318D9CC801550909B /* scantree.hpp in Headers */,
+				D2A092ED39692A522823DBDDE77E7B73 /* secpassword.hpp in Headers */,
+				1C4A48DFCF86E78E97D9C5FC331CECBC /* sha1.hpp in Headers */,
+				9DE4DB84CA46885BEC05B18D25CA4136 /* sha256.hpp in Headers */,
+				FA375D9D9F426FF2B105779CF4539E51 /* smallfn.hpp in Headers */,
+				B4F0647EEB0025FFA0C440FE7CA32EA3 /* strfn.hpp in Headers */,
+				80B3B1A269AB4F07A4BCDC03DA0B90F8 /* strlist.hpp in Headers */,
+				3CF2D9A7B330E493F60E03F2B888EE71 /* suballoc.hpp in Headers */,
+				1341ECC4D8A0A83372668098A45A081A /* system.hpp in Headers */,
+				7E9AFC49D9264648428467A9A907EDF0 /* threadpool.hpp in Headers */,
+				CFBE51F560BD025776C162B5A428E9E8 /* timefn.hpp in Headers */,
+				615AD822BED10B018673559B4548EFDF /* ui.hpp in Headers */,
+				BF21D7BD387BC8B0EF7EFFE56842418A /* unicode.hpp in Headers */,
+				A6B9D13BB6C04EEAFE4E88E3689E3292 /* unpack.hpp in Headers */,
+				495C1E48079BAC813FAE0C9F0B0E0482 /* UnrarKit.h in Headers */,
+				3B3817C95D099B2CD3A159C0335B18BA /* UnrarKitMacros.h in Headers */,
+				77866A9B6B5BDB6334DAFCE9691D2133 /* URKArchive.h in Headers */,
+				FA5E2A71C70F5EAF7D33267ECBB189D6 /* URKFileInfo.h in Headers */,
+				F4F35D7487591F639B43EFB85FC08793 /* version.hpp in Headers */,
+				7F6244BD7D1C03A5C693C4A1A1054770 /* volume.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8C88BC086466F4C7A6478AC98398FDE9 /* Pods-YKRarKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73CF7ACEE28EB274340B17A3D083F163 /* Build configuration list for PBXNativeTarget "Pods-YKRarKit_Example" */;
+			buildPhases = (
+				B5DAF1DEE9A030B9A1AADBC36969AE9E /* Headers */,
+				9C96E6B19E12FA5899432902B5B2EEBD /* Sources */,
+				91F555A97F0BD8DE2D91BB2D01FAF6BE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E988AE39E63561A9834FDA01E203F8F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-YKRarKit_Example";
+			productName = "Pods-YKRarKit_Example";
+			productReference = 6B68D4F6B578A6FE826806030723D13E /* Pods-YKRarKit_Example */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F3E839C05A60346E03EE88BB7E744002 /* YKRarKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26DD2285FEEB011B4D6E2C93E17116D4 /* Build configuration list for PBXNativeTarget "YKRarKit" */;
+			buildPhases = (
+				F9505C0039E91244278647ACC53AD806 /* Headers */,
+				55976F470D26B2975520214BBA3388CF /* Sources */,
+				5D5631544594EC0FE0DAD8808AE00E4A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKRarKit;
+			productName = YKRarKit;
+			productReference = 4299ED689E3C423F88D7CA4E14D08436 /* YKRarKit */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B9C1095A317A81F0BEEF3C517AD6BD56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C88BC086466F4C7A6478AC98398FDE9 /* Pods-YKRarKit_Example */,
+				F3E839C05A60346E03EE88BB7E744002 /* YKRarKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55976F470D26B2975520214BBA3388CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61385D72933F5A0010A304546036335 /* archive.cpp in Sources */,
+				929416FF3B55AC5E99EE73AA5563522F /* arcread.cpp in Sources */,
+				C07EA9DB5958BF1DE2DEADD71751EB09 /* blake2s.cpp in Sources */,
+				D22B0E9AE3325DB8BB5D1D0B3EB098B4 /* cmddata.cpp in Sources */,
+				31638625D5E0F34670CB9717F610B04E /* consio.cpp in Sources */,
+				04B78886EB674D12AEB5E59741191C3E /* crc.cpp in Sources */,
+				76097F6414B8F27E19997E5116BCC64B /* crypt.cpp in Sources */,
+				89DA598792ED421E737DEEFD0AAFCF8C /* dll.cpp in Sources */,
+				D4D43376AB3B28D99ACFADC8AD25BC26 /* encname.cpp in Sources */,
+				4EA9EBE590C46D3F90C9E948CDDF4D21 /* errhnd.cpp in Sources */,
+				2680B5786B649DCCAE5FE3EE0D8B5E2D /* extinfo.cpp in Sources */,
+				86197CDF9C4764224FDEE1246BA6A4E7 /* extract.cpp in Sources */,
+				62162826BE2902BCE277EDD932722223 /* filcreat.cpp in Sources */,
+				69DAAD3DD515BAE3E9DE0771B80A4220 /* file.cpp in Sources */,
+				CB1C556378C9BA5DE670BE068E1C1ABE /* filefn.cpp in Sources */,
+				576196D780D801F01577E1886F4C14FA /* filestr.cpp in Sources */,
+				3ED944FCA0701951E514CC9E34CF0771 /* find.cpp in Sources */,
+				E65561A5A4C80FAB019D392E76643FB1 /* getbits.cpp in Sources */,
+				D00B5D2BAACED91AA1F653105A8CBAA1 /* global.cpp in Sources */,
+				F24C9C8CB68AD5765E4CE2F956DDD61B /* hash.cpp in Sources */,
+				BA950C839BD82D6E1DFCEE07FE5CA254 /* headers.cpp in Sources */,
+				67BB3BB51F2022D142CD150F1FED4453 /* list.cpp in Sources */,
+				719E4434059FEB503401C5C030FD3586 /* match.cpp in Sources */,
+				C078119E6C83466F36E1A220387486C7 /* NSString+UnrarKit.mm in Sources */,
+				BB7ECC4980FBF13C4E64C302DBF5133C /* options.cpp in Sources */,
+				3C4B4BB34BCB532151DB4FB464148E62 /* pathfn.cpp in Sources */,
+				0ECAB56F6ED2DD70C142D549BE8CA40A /* qopen.cpp in Sources */,
+				C4810D7A28093C13FBA308CB0DC43339 /* rar.cpp in Sources */,
+				8AC5C489A9BCDFA2227CCD5DBE71001D /* rarvm.cpp in Sources */,
+				0D26FCF0445D9F97E5446E027483BEB0 /* rawread.cpp in Sources */,
+				FE1E18D76C5DA80CE737838D439405CE /* rdwrfn.cpp in Sources */,
+				AC884EA4F06DCFF286C9DFBEFF764C05 /* recvol.cpp in Sources */,
+				560BD600CCEA3E29DE779AFBF85464C1 /* resource.cpp in Sources */,
+				50A6BDBBB181F5BEC9AAE4FD2A26BA72 /* rijndael.cpp in Sources */,
+				5CBDB0E60C2E8ACA5B4502F6204C5C42 /* rs.cpp in Sources */,
+				83EF0C19C45CBE5D897F8DEAF242EAAF /* rs16.cpp in Sources */,
+				8A9EB1DD2F7ACDE35EDE456E259D5CBE /* scantree.cpp in Sources */,
+				699B640759B5A930C50BE21871009B10 /* secpassword.cpp in Sources */,
+				6DBC41AE77CF4B6EDAEAA82CABD6AB4A /* sha1.cpp in Sources */,
+				A6530B2162285263DEBF21FF3C2D4992 /* sha256.cpp in Sources */,
+				6B55C63542CEE338B6F4FAD07889F003 /* smallfn.cpp in Sources */,
+				CFBF2310CC5917103D354EC699E79AE3 /* strfn.cpp in Sources */,
+				1C7A627C1BDF7C083F519BB56F588281 /* strlist.cpp in Sources */,
+				D453590936306FEC4EB0EE98B8395883 /* system.cpp in Sources */,
+				F1CB3E92581AC89CCF4776CCE3A44C5B /* threadpool.cpp in Sources */,
+				4C55BBFF3EA445DB707FA40CEA5F5E3F /* timefn.cpp in Sources */,
+				9F318C56A7382E82D6AB18328D2614EC /* ui.cpp in Sources */,
+				E948B975B6E86587ED45E3F122C47057 /* unicode.cpp in Sources */,
+				DF9B16EE4C8E3D3B0CDC3BAD2DCBBEB0 /* unpack.cpp in Sources */,
+				8C7FCDFC3589E1FA1F36F6FC64909168 /* URKArchive.mm in Sources */,
+				DB9A1695489F68502748CE6DADC162FA /* URKFileInfo.m in Sources */,
+				ADFDCFD55F5A925D0A772A753073B300 /* volume.cpp in Sources */,
+				2396389D0E98474774FF90260453ADB3 /* YKRarKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C96E6B19E12FA5899432902B5B2EEBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203D2E84D5719E1D40A2ABA97B5A7D2F /* Pods-YKRarKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E988AE39E63561A9834FDA01E203F8F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YKRarKit;
+			target = F3E839C05A60346E03EE88BB7E744002 /* YKRarKit */;
+			targetProxy = 803E324106B80BF876364417779D38E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		272D2565516F0E07AE74589132DE7884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 527D099225908782891FE16AFFCC26CC /* YKRarKit.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/YKRarKit/YKRarKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = YKRarKit;
+				PRODUCT_NAME = YKRarKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2EC00F93289874F53185875A69AD5E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EF7DB629E19EF82BF21488D9EC1F008 /* YKRarKit.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/YKRarKit/YKRarKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = YKRarKit;
+				PRODUCT_NAME = YKRarKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B0E9B379030C528DA8D170F604DC8471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39575E0E46C8A89F57F190430E703F0 /* Pods-YKRarKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE6B2FEAD7AA16198FD0F5F179F88598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C549C502551338270CFB5827EC3CA9F6 /* Pods-YKRarKit_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26DD2285FEEB011B4D6E2C93E17116D4 /* Build configuration list for PBXNativeTarget "YKRarKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D2565516F0E07AE74589132DE7884 /* Debug */,
+				2EC00F93289874F53185875A69AD5E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73CF7ACEE28EB274340B17A3D083F163 /* Build configuration list for PBXNativeTarget "Pods-YKRarKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6B2FEAD7AA16198FD0F5F179F88598 /* Debug */,
+				B0E9B379030C528DA8D170F604DC8471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B9967C3629C16D792A9341D /* libPods-YKApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB07D63BD318FD8962D50031 /* libPods-YKApp.a */; };
+		73105E4B2E9A50560057651F /* YKIPCKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E4A2E9A50560057651F /* YKIPCKey.framework */; };
+		73105E4D2E9A505C0057651F /* YKXPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E4C2E9A505C0057651F /* YKXPC.framework */; };
+		73105E502E9A50730057651F /* YKAppIPCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73105E4F2E9A50730057651F /* YKAppIPCController.m */; };
+		73105E5E2E9F84BB0057651F /* YKDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73105E5D2E9F84BB0057651F /* YKDeviceModel.m */; };
+		73105E642E9F94130057651F /* YKAppKeyValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73105E632E9F94130057651F /* YKAppKeyValueCell.m */; };
+		73105E662EA0B1A70057651F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E652EA0B1A70057651F /* AVFoundation.framework */; };
+		73105E692EA0B1B70057651F /* YKScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73105E682EA0B1B70057651F /* YKScanViewController.m */; };
+		73105E6C2EA0B3D70057651F /* YKHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73105E6B2EA0B3D70057651F /* YKHeaderView.m */; };
+		73105E6E2EA0C5AA0057651F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E6D2EA0C5AA0057651F /* QuartzCore.framework */; };
+		73105E732EA0C9740057651F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E722EA0C9740057651F /* CoreGraphics.framework */; };
+		73105E752EA0C9910057651F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E742EA0C9910057651F /* CoreImage.framework */; };
+		73105E8E2EA0E1CA0057651F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73105E8D2EA0E1CA0057651F /* AudioToolbox.framework */; };
+		7340EB272E76621C00AF70D9 /* YKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB262E76621C00AF70D9 /* YKDelegate.m */; };
+		7340EB322E76621E00AF70D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7340EB312E76621E00AF70D9 /* Assets.xcassets */; };
+		7340EB352E76621E00AF70D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7340EB332E76621E00AF70D9 /* LaunchScreen.storyboard */; };
+		7340EB382E76621E00AF70D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB372E76621E00AF70D9 /* main.m */; };
+		7340EB452E76639100AF70D9 /* YKAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7340EB442E76639100AF70D9 /* YKAppController.m */; };
+		7340EB482E766BEE00AF70D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EB472E766BEE00AF70D9 /* UIKit.framework */; };
+		7340EB4A2E766BF200AF70D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7340EB492E766BF200AF70D9 /* Foundation.framework */; };
+		735DA7592F090D49009402CF /* YKHomeHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 735DA7582F090D49009402CF /* YKHomeHeaderFooterView.m */; };
+		735DA7612F0A5C82009402CF /* YKDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 735DA7602F0A5C82009402CF /* YKDeviceCell.m */; };
+		73AE0C3C2EFF7223004D8AF8 /* YKAppSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AE0C3B2EFF7223004D8AF8 /* YKAppSwitchCell.m */; };
+		73FBFE7F2EB87843002FEC7F /* YKToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FBFE7E2EB87843002FEC7F /* YKToast.m */; };
+		80A25CF72E9FEDD700060DD6 /* YKAppContentArrowsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A25CF62E9FEDD700060DD6 /* YKAppContentArrowsCell.m */; };
+		80A5CEDB2F16760300A3943A /* YKWarningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5CEDA2F16760300A3943A /* YKWarningCell.m */; };
+		80BE8F9F2F36090C002A9847 /* YKLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BE8F9E2F36090C002A9847 /* YKLogViewController.m */; };
+		80BE8FA22F360CBD002A9847 /* YKLogReaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BE8FA12F360CBD002A9847 /* YKLogReaderManager.m */; };
+		80ED2CBF2E9931FF0026EBA6 /* YKHomeNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ED2CBE2E9931FF0026EBA6 /* YKHomeNavigationView.m */; };
+		80ED2CC42E99338D0026EBA6 /* YKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ED2CC32E99338D0026EBA6 /* YKColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		457A9815F405F471C66F033A /* Pods-YKApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKApp.release.xcconfig"; path = "Target Support Files/Pods-YKApp/Pods-YKApp.release.xcconfig"; sourceTree = "<group>"; };
+		73105E4A2E9A50560057651F /* YKIPCKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKIPCKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73105E4C2E9A505C0057651F /* YKXPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YKXPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73105E4E2E9A50730057651F /* YKAppIPCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppIPCController.h; sourceTree = "<group>"; };
+		73105E4F2E9A50730057651F /* YKAppIPCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppIPCController.m; sourceTree = "<group>"; };
+		73105E5C2E9F84BB0057651F /* YKDeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDeviceModel.h; sourceTree = "<group>"; };
+		73105E5D2E9F84BB0057651F /* YKDeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDeviceModel.m; sourceTree = "<group>"; };
+		73105E622E9F94130057651F /* YKAppKeyValueCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppKeyValueCell.h; sourceTree = "<group>"; };
+		73105E632E9F94130057651F /* YKAppKeyValueCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppKeyValueCell.m; sourceTree = "<group>"; };
+		73105E652EA0B1A70057651F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		73105E672EA0B1B70057651F /* YKScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKScanViewController.h; sourceTree = "<group>"; };
+		73105E682EA0B1B70057651F /* YKScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKScanViewController.m; sourceTree = "<group>"; };
+		73105E6A2EA0B3D70057651F /* YKHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHeaderView.h; sourceTree = "<group>"; };
+		73105E6B2EA0B3D70057651F /* YKHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHeaderView.m; sourceTree = "<group>"; };
+		73105E6D2EA0C5AA0057651F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73105E722EA0C9740057651F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73105E742EA0C9910057651F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		73105E8D2EA0E1CA0057651F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7340EB222E76621C00AF70D9 /* YKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7340EB252E76621C00AF70D9 /* YKDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDelegate.h; sourceTree = "<group>"; };
+		7340EB262E76621C00AF70D9 /* YKDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDelegate.m; sourceTree = "<group>"; };
+		7340EB312E76621E00AF70D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7340EB342E76621E00AF70D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7340EB362E76621E00AF70D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7340EB372E76621E00AF70D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7340EB432E76639100AF70D9 /* YKAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppController.h; sourceTree = "<group>"; };
+		7340EB442E76639100AF70D9 /* YKAppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppController.m; sourceTree = "<group>"; };
+		7340EB472E766BEE00AF70D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7340EB492E766BF200AF70D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		735DA7572F090D49009402CF /* YKHomeHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHomeHeaderFooterView.h; sourceTree = "<group>"; };
+		735DA7582F090D49009402CF /* YKHomeHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHomeHeaderFooterView.m; sourceTree = "<group>"; };
+		735DA75F2F0A5C82009402CF /* YKDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDeviceCell.h; sourceTree = "<group>"; };
+		735DA7602F0A5C82009402CF /* YKDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDeviceCell.m; sourceTree = "<group>"; };
+		73AE0C3A2EFF7223004D8AF8 /* YKAppSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppSwitchCell.h; sourceTree = "<group>"; };
+		73AE0C3B2EFF7223004D8AF8 /* YKAppSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppSwitchCell.m; sourceTree = "<group>"; };
+		73FBFE7D2EB87843002FEC7F /* YKToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKToast.h; sourceTree = "<group>"; };
+		73FBFE7E2EB87843002FEC7F /* YKToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKToast.m; sourceTree = "<group>"; };
+		80A25CF52E9FEDD700060DD6 /* YKAppContentArrowsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppContentArrowsCell.h; sourceTree = "<group>"; };
+		80A25CF62E9FEDD700060DD6 /* YKAppContentArrowsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAppContentArrowsCell.m; sourceTree = "<group>"; };
+		80A25CFF2EA3375900060DD6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		80A25D012EA3375F00060DD6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80A25D032EA3377E00060DD6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		80A5CED92F16760300A3943A /* YKWarningCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKWarningCell.h; sourceTree = "<group>"; };
+		80A5CEDA2F16760300A3943A /* YKWarningCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKWarningCell.m; sourceTree = "<group>"; };
+		80BE8F9D2F36090C002A9847 /* YKLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLogViewController.h; sourceTree = "<group>"; };
+		80BE8F9E2F36090C002A9847 /* YKLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLogViewController.m; sourceTree = "<group>"; };
+		80BE8FA02F360CBD002A9847 /* YKLogReaderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLogReaderManager.h; sourceTree = "<group>"; };
+		80BE8FA12F360CBD002A9847 /* YKLogReaderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLogReaderManager.m; sourceTree = "<group>"; };
+		80ED2CBD2E9931FF0026EBA6 /* YKHomeNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHomeNavigationView.h; sourceTree = "<group>"; };
+		80ED2CBE2E9931FF0026EBA6 /* YKHomeNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHomeNavigationView.m; sourceTree = "<group>"; };
+		80ED2CC22E99338D0026EBA6 /* YKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKColor.h; sourceTree = "<group>"; };
+		80ED2CC32E99338D0026EBA6 /* YKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKColor.m; sourceTree = "<group>"; };
+		80ED2CC52E9940450026EBA6 /* YKAppLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAppLogger.h; sourceTree = "<group>"; };
+		B4B170306333627538DCDECB /* Pods-YKApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKApp.debug.xcconfig"; path = "Target Support Files/Pods-YKApp/Pods-YKApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EB07D63BD318FD8962D50031 /* libPods-YKApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7340EB1F2E76621C00AF70D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73105E8E2EA0E1CA0057651F /* AudioToolbox.framework in Frameworks */,
+				73105E752EA0C9910057651F /* CoreImage.framework in Frameworks */,
+				73105E732EA0C9740057651F /* CoreGraphics.framework in Frameworks */,
+				73105E6E2EA0C5AA0057651F /* QuartzCore.framework in Frameworks */,
+				73105E662EA0B1A70057651F /* AVFoundation.framework in Frameworks */,
+				73105E4D2E9A505C0057651F /* YKXPC.framework in Frameworks */,
+				73105E4B2E9A50560057651F /* YKIPCKey.framework in Frameworks */,
+				7340EB4A2E766BF200AF70D9 /* Foundation.framework in Frameworks */,
+				7340EB482E766BEE00AF70D9 /* UIKit.framework in Frameworks */,
+				4B9967C3629C16D792A9341D /* libPods-YKApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36D92E05A6185C7BADC16EF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4B170306333627538DCDECB /* Pods-YKApp.debug.xcconfig */,
+				457A9815F405F471C66F033A /* Pods-YKApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../YKPods/Pods;
+			sourceTree = "<group>";
+		};
+		73105E5B2E9F84A50057651F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73105E5C2E9F84BB0057651F /* YKDeviceModel.h */,
+				73105E5D2E9F84BB0057651F /* YKDeviceModel.m */,
+				80BE8FA02F360CBD002A9847 /* YKLogReaderManager.h */,
+				80BE8FA12F360CBD002A9847 /* YKLogReaderManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7340EB192E76621C00AF70D9 = {
+			isa = PBXGroup;
+			children = (
+				7340EB3F2E76622200AF70D9 /* YKApp */,
+				7340EB462E766BEE00AF70D9 /* Frameworks */,
+				7340EB232E76621C00AF70D9 /* Products */,
+				36D92E05A6185C7BADC16EF1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		7340EB232E76621C00AF70D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB222E76621C00AF70D9 /* YKApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7340EB3F2E76622200AF70D9 /* YKApp */ = {
+			isa = PBXGroup;
+			children = (
+				80ED2CC12E9933790026EBA6 /* Kit */,
+				73105E5B2E9F84A50057651F /* Model */,
+				80ED2CBC2E9931EA0026EBA6 /* View */,
+				7340EB422E76637800AF70D9 /* Controller */,
+				7340EB412E76633900AF70D9 /* Resources */,
+				7340EB402E76632700AF70D9 /* Main */,
+				7340EB362E76621E00AF70D9 /* Info.plist */,
+			);
+			path = YKApp;
+			sourceTree = "<group>";
+		};
+		7340EB402E76632700AF70D9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB372E76621E00AF70D9 /* main.m */,
+				7340EB252E76621C00AF70D9 /* YKDelegate.h */,
+				7340EB262E76621C00AF70D9 /* YKDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7340EB412E76633900AF70D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB332E76621E00AF70D9 /* LaunchScreen.storyboard */,
+				7340EB312E76621E00AF70D9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7340EB422E76637800AF70D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7340EB432E76639100AF70D9 /* YKAppController.h */,
+				7340EB442E76639100AF70D9 /* YKAppController.m */,
+				73105E4E2E9A50730057651F /* YKAppIPCController.h */,
+				73105E4F2E9A50730057651F /* YKAppIPCController.m */,
+				73105E672EA0B1B70057651F /* YKScanViewController.h */,
+				73105E682EA0B1B70057651F /* YKScanViewController.m */,
+				80BE8F9D2F36090C002A9847 /* YKLogViewController.h */,
+				80BE8F9E2F36090C002A9847 /* YKLogViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7340EB462E766BEE00AF70D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80A25D032EA3377E00060DD6 /* Security.framework */,
+				80A25D012EA3375F00060DD6 /* SystemConfiguration.framework */,
+				80A25CFF2EA3375900060DD6 /* CFNetwork.framework */,
+				73105E8D2EA0E1CA0057651F /* AudioToolbox.framework */,
+				73105E742EA0C9910057651F /* CoreImage.framework */,
+				73105E722EA0C9740057651F /* CoreGraphics.framework */,
+				73105E6D2EA0C5AA0057651F /* QuartzCore.framework */,
+				73105E652EA0B1A70057651F /* AVFoundation.framework */,
+				73105E4C2E9A505C0057651F /* YKXPC.framework */,
+				73105E4A2E9A50560057651F /* YKIPCKey.framework */,
+				7340EB492E766BF200AF70D9 /* Foundation.framework */,
+				7340EB472E766BEE00AF70D9 /* UIKit.framework */,
+				EB07D63BD318FD8962D50031 /* libPods-YKApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80ED2CBC2E9931EA0026EBA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80ED2CBD2E9931FF0026EBA6 /* YKHomeNavigationView.h */,
+				80ED2CBE2E9931FF0026EBA6 /* YKHomeNavigationView.m */,
+				73105E622E9F94130057651F /* YKAppKeyValueCell.h */,
+				73105E632E9F94130057651F /* YKAppKeyValueCell.m */,
+				80A25CF52E9FEDD700060DD6 /* YKAppContentArrowsCell.h */,
+				80A25CF62E9FEDD700060DD6 /* YKAppContentArrowsCell.m */,
+				73105E6A2EA0B3D70057651F /* YKHeaderView.h */,
+				73105E6B2EA0B3D70057651F /* YKHeaderView.m */,
+				73AE0C3A2EFF7223004D8AF8 /* YKAppSwitchCell.h */,
+				73AE0C3B2EFF7223004D8AF8 /* YKAppSwitchCell.m */,
+				735DA7572F090D49009402CF /* YKHomeHeaderFooterView.h */,
+				735DA7582F090D49009402CF /* YKHomeHeaderFooterView.m */,
+				735DA75F2F0A5C82009402CF /* YKDeviceCell.h */,
+				735DA7602F0A5C82009402CF /* YKDeviceCell.m */,
+				80A5CED92F16760300A3943A /* YKWarningCell.h */,
+				80A5CEDA2F16760300A3943A /* YKWarningCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80ED2CC12E9933790026EBA6 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				80ED2CC22E99338D0026EBA6 /* YKColor.h */,
+				80ED2CC32E99338D0026EBA6 /* YKColor.m */,
+				80ED2CC52E9940450026EBA6 /* YKAppLogger.h */,
+				73FBFE7D2EB87843002FEC7F /* YKToast.h */,
+				73FBFE7E2EB87843002FEC7F /* YKToast.m */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7340EB212E76621C00AF70D9 /* YKApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7340EB3A2E76621E00AF70D9 /* Build configuration list for PBXNativeTarget "YKApp" */;
+			buildPhases = (
+				6202BFB688FD0BAE43A2FE78 /* [CP] Check Pods Manifest.lock */,
+				7340EB1E2E76621C00AF70D9 /* Sources */,
+				7340EB1F2E76621C00AF70D9 /* Frameworks */,
+				7340EB202E76621C00AF70D9 /* Resources */,
+				E733C0354BD7A3949670E1C4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKApp;
+			productName = YKApp;
+			productReference = 7340EB222E76621C00AF70D9 /* YKApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7340EB1A2E76621C00AF70D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					7340EB212E76621C00AF70D9 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 7340EB1D2E76621C00AF70D9 /* Build configuration list for PBXProject "YKApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7340EB192E76621C00AF70D9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7340EB232E76621C00AF70D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7340EB212E76621C00AF70D9 /* YKApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7340EB202E76621C00AF70D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7340EB352E76621E00AF70D9 /* LaunchScreen.storyboard in Resources */,
+				7340EB322E76621E00AF70D9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6202BFB688FD0BAE43A2FE78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YKApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E733C0354BD7A3949670E1C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YKApp/Pods-YKApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YKApp/Pods-YKApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YKApp/Pods-YKApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7340EB1E2E76621C00AF70D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73105E502E9A50730057651F /* YKAppIPCController.m in Sources */,
+				80ED2CC42E99338D0026EBA6 /* YKColor.m in Sources */,
+				80BE8F9F2F36090C002A9847 /* YKLogViewController.m in Sources */,
+				7340EB452E76639100AF70D9 /* YKAppController.m in Sources */,
+				735DA7612F0A5C82009402CF /* YKDeviceCell.m in Sources */,
+				80BE8FA22F360CBD002A9847 /* YKLogReaderManager.m in Sources */,
+				80A5CEDB2F16760300A3943A /* YKWarningCell.m in Sources */,
+				73AE0C3C2EFF7223004D8AF8 /* YKAppSwitchCell.m in Sources */,
+				73105E692EA0B1B70057651F /* YKScanViewController.m in Sources */,
+				735DA7592F090D49009402CF /* YKHomeHeaderFooterView.m in Sources */,
+				80ED2CBF2E9931FF0026EBA6 /* YKHomeNavigationView.m in Sources */,
+				73105E6C2EA0B3D70057651F /* YKHeaderView.m in Sources */,
+				73105E642E9F94130057651F /* YKAppKeyValueCell.m in Sources */,
+				7340EB272E76621C00AF70D9 /* YKDelegate.m in Sources */,
+				7340EB382E76621E00AF70D9 /* main.m in Sources */,
+				80A25CF72E9FEDD700060DD6 /* YKAppContentArrowsCell.m in Sources */,
+				73105E5E2E9F84BB0057651F /* YKDeviceModel.m in Sources */,
+				73FBFE7F2EB87843002FEC7F /* YKToast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7340EB332E76621E00AF70D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7340EB342E76621E00AF70D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7340EB3B2E76621E00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B170306333627538DCDECB /* Pods-YKApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74MC74A426;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YKApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "远控Pro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "访问您的相机扫描二维码";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.ykpro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7340EB3C2E76621E00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 457A9815F405F471C66F033A /* Pods-YKApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74MC74A426;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YKApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "远控Pro";
+				INFOPLIST_KEY_NSCameraUsageDescription = "访问您的相机扫描二维码";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.ykpro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7340EB3D2E76621E00AF70D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 94YKR78V86;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Debug;
+		};
+		7340EB3E2E76621E00AF70D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 94YKR78V86;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7340EB1D2E76621C00AF70D9 /* Build configuration list for PBXProject "YKApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EB3D2E76621E00AF70D9 /* Debug */,
+				7340EB3E2E76621E00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7340EB3A2E76621E00AF70D9 /* Build configuration list for PBXNativeTarget "YKApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7340EB3B2E76621E00AF70D9 /* Debug */,
+				7340EB3C2E76621E00AF70D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7340EB1A2E76621C00AF70D9 /* Project object */;
+}
