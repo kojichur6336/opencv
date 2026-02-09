@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
           fetch-depth: 0 
 
-      - name: 强制指定 Xcode 版本 (16.4)
+      - name: 强制指定 Xcode 版本
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '16.4'
@@ -102,10 +102,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 发布失败时上传产物
-        if: failure()
+      - name: 上传构建产物
         uses: actions/upload-artifact@v4
         with:
-          name: packages-backup
+          name: Packages
           path: Build/Packages/*.deb
           retention-days: 30
