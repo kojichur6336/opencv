@@ -1,19 +1,11 @@
-name: iOS 编译构建 (自定义工具链版)
+name: iOS 编译构建
 
 on:
   push:
-    tags:
-      - '*' 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: '发布版本号 (例如 1.0.0)'
-        required: false
-        default: '1.0.0'
-      body:
-        description: '更新日志 (如需换行请输入 \n，例如: 1.优化内容 \n 2.修复Bug)'
-        required: false
-        default: '常规性能优化与 bug 修复'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -24,18 +16,17 @@ jobs:
     runs-on: macos-15 
 
     steps:
-      - name: 1. 检出代码仓库
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0 
 
-      - name: 2. 强制指定 Xcode 版本 (16.4)
+      - name: 强制指定 Xcode 版本 (16.4)
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.4' 
+          xcode-version: '16.4'
 
-      - name: 3. 输出详细环境信息
+      - name: 输出详细环境信息
         run: |
           echo "========= 🖥️ 系统信息 ========="
           sw_vers
@@ -43,7 +34,21 @@ jobs:
           xcode-select -p
           xcodebuild -version
 
-      - name: 4. 配置自定义 Ollvm 工具链 (Hikari)
+      - name: Get Release Version
+        run: |
+          cd YKApp/YKApp.xcodeproj
+          # 使用 perl 匹配 Release 配置块中的 MARKETING_VERSION
+          VERSION=$(perl -ne 'print $1 if /Release/ .. /MARKETING_VERSION = (.*?);/ and /MARKETING_VERSION = (.*?);/' project.pbxproj | head -n 1)
+
+          if [ -z "$VERSION" ]; then
+            echo "❌ 错误: 无法在 Release 配置中找到 MARKETING_VERSION"
+            exit 1
+          fi
+
+          echo "✅ 成功获取 Release 版本号: $VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: 配置自定义 Ollvm 工具链 (Hikari)
         run: |
           echo "🚀 下载并解压工具链..."
           curl -L "https://github.com/LiuSky/XCode-LLVM-Toolchains/releases/download/v1.0.0-M-Series/Hikari-LLVM15-Toolchain.tar.gz" -o Hikari.tar.gz
@@ -58,46 +63,16 @@ jobs:
           sudo cp -R "$DEFAULT_CLANG_LIB_DIR" "$CUSTOM_CLANG_VERSION_DIR/"
           echo "✅ 工具链安装完成。"
 
-      - name: 5. 安装依赖 (dpkg, ldid)
+      - name: 安装依赖 (dpkg, ldid)
         run: brew install dpkg ldid
 
-      - name: 6. 权限设置
+      - name: 权限设置
         working-directory: ./Build 
         run: find . -name "*.sh" -exec chmod +x {} +
 
-      - name: 7. 提取与处理更新日志
-        id: get_log
-        run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            LOG_CONTENT="${{ github.event.inputs.body }}"
-          elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            # 这里的 --format='%(contents)' 是保留换行的关键
-            TAG_MSG=$(git tag -l --format='%(contents)' ${{ github.ref_name }} | sed 's/[[:space:]]*$//')
-            [[ -z "$TAG_MSG" ]] && TAG_MSG=$(git log -1 --pretty=format:"%s%n%n%b")
-            LOG_CONTENT="$TAG_MSG"
-          else
-            LOG_CONTENT=$(git log -1 --pretty=format:"%s%n%n%b")
-          fi
-
-          # 统一处理字面量 \n 字符
-          FINAL_LOG=$(echo "$LOG_CONTENT" | perl -pe 's/\\r\\n/\n/g; s/\\n/\n/g')
-
-          echo "COMMIT_LOG<<EOF" >> $GITHUB_ENV
-          echo "$FINAL_LOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-      - name: 8. 执行多架构编译
+      - name: 执行多架构编译
         working-directory: ./Build
         run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            RAW_VERSION="${{ github.event.inputs.version }}"
-          elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            RAW_VERSION="${{ github.ref_name }}"
-          else
-            RAW_VERSION="1.0.0"
-          fi
-          VERSION=${RAW_VERSION#v}
-          
           BUILD_CONFIGS=("rootful:_iphoneos-arm" "rootless:_iphoneos-arm64" "roothide:_iphoneos-arm64e")
           for CONFIG in "${BUILD_CONFIGS[@]}"; do
             MODE=${CONFIG%%:*}
@@ -108,31 +83,29 @@ jobs:
             NEW_FILE="Packages/com.sky.ykpro_${VERSION}${SUFFIX}.deb"
             [ -f "$OLD_FILE" ] && mv "$OLD_FILE" "$NEW_FILE"
           done
-          echo "FINAL_TAG=$RAW_VERSION" >> $GITHUB_ENV
-        env:
-          PREFIX: /opt/homebrew/bin/
 
-      - name: 9. 上传产物
-        uses: actions/upload-artifact@v4
-        with:
-          name: all-packages
-          path: Build/Packages/*.deb
-
-      - name: 10. 发布 Release
-        if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/')
+      - name: 发布 Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ env.FINAL_TAG }}
+          tag_name: v${{ env.VERSION }}
           files: Build/Packages/*.deb
           body: |
             ### 📝 更新日志
-            ${{ env.COMMIT_LOG }}
+            ${{ github.event.head_commit.message }}
 
             ---
             ### 📦 构建详情
-            - **版本**: ${{ env.FINAL_TAG }}
+            - **版本**: ${{ env.VERSION }}
             - **工具**: Xcode 16.4 / Ollvm 15
             - **架构**: Rootful, Rootless, Roothide
           generate_release_notes: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 发布失败时上传产物
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages-backup
+          path: Build/Packages/*.deb
+          retention-days: 30
