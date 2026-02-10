@@ -23,11 +23,19 @@
 #define yk_configView                    Ad5212b2c2cc3f423c21cbf5122fbb7109f
 #define yk_configLocation                B13048a892xb1ccce878f2d867b0a551254
 
-// 定义一些炫酷的颜色宏
-#define kCoolDarkColor [UIColor colorWithRed:20/255.0 green:20/255.0 blue:30/255.0 alpha:1.0]
-#define kCoolCellColor [UIColor colorWithWhite:1.0 alpha:0.08]
-#define kCoolAccentColor [UIColor colorWithRed:0/255.0 green:255/255.0 blue:200/255.0 alpha:1.0] // 青色高亮
-#define kCoolTextColor [UIColor whiteColor]
+// --- 颜色配置 (升级为更高级的配色) ---
+// 背景色：深邃的黑蓝
+#define kBgTopColor     [UIColor colorWithRed:10/255.0 green:12/255.0 blue:20/255.0 alpha:1.0]
+#define kBgBottomColor  [UIColor colorWithRed:0/255.0 green:0/255.0 blue:5/255.0 alpha:1.0]
+
+// 卡片颜色：实色深灰 (比背景稍亮，确保可读性)
+#define kCardColor      [UIColor colorWithRed:35/255.0 green:37/255.0 blue:45/255.0 alpha:1.0]
+
+// 文字颜色
+#define kTitleColor     [UIColor colorWithWhite:0.6 alpha:1.0] // 标题灰色
+#define kValueColor     [UIColor whiteColor]                   // 内容纯白
+#define kAccentColor    [UIColor colorWithRed:64/255.0 green:156/255.0 blue:255/255.0 alpha:1.0] // 科技蓝
+#define kSuccessColor   [UIColor colorWithRed:46/255.0 green:204/255.0 blue:113/255.0 alpha:1.0] // 状态绿
 
 @interface YKAppController ()<UITableViewDataSource, UITableViewDelegate, YKNavigationViewDelegate, YKAppIPCControllerDelegate, YKScanViewControllerDelegate, YKAppSwitchCellDelegate>
 @property(nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;//加载视图
@@ -44,8 +52,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置炫酷的渐变背景
-    [self setupCoolBackground];
+    // 设置高级感背景
+    [self setupPremiumBackground];
     
     self.sections = [[NSMutableArray alloc] init];
     [self yk_configView];
@@ -55,25 +63,23 @@
     [self.iPCController yk_getDeviceInfo];
 }
 
-// 新增：设置背景渐变
-- (void)setupCoolBackground {
-    self.view.backgroundColor = kCoolDarkColor;
+// 优化背景：更加深邃沉稳
+- (void)setupPremiumBackground {
+    self.view.backgroundColor = kBgTopColor;
     
     if (!self.backgroundGradientLayer) {
         self.backgroundGradientLayer = [CAGradientLayer layer];
         self.backgroundGradientLayer.frame = self.view.bounds;
-        // 深蓝到黑色的科技感渐变
         self.backgroundGradientLayer.colors = @[
-            (__bridge id)[UIColor colorWithRed:15/255.0 green:25/255.0 blue:45/255.0 alpha:1.0].CGColor,
-            (__bridge id)[UIColor colorWithRed:5/255.0 green:5/255.0 blue:10/255.0 alpha:1.0].CGColor
+            (__bridge id)kBgTopColor.CGColor,
+            (__bridge id)kBgBottomColor.CGColor
         ];
         self.backgroundGradientLayer.startPoint = CGPointMake(0, 0);
-        self.backgroundGradientLayer.endPoint = CGPointMake(1, 1);
+        self.backgroundGradientLayer.endPoint = CGPointMake(0, 1); // 垂直渐变，更稳重
         [self.view.layer insertSublayer:self.backgroundGradientLayer atIndex:0];
     }
 }
 
-// 布局发生变化时更新渐变层
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.backgroundGradientLayer.frame = self.view.bounds;
@@ -134,36 +140,47 @@
     
 }
 
-// 增加 cell 的视觉效果处理
+// 核心优化：让卡片更立体，颜色更现代
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 1. 设置 Cell 背景透明或半透明
-    cell.backgroundColor = kCoolCellColor;
+    // 1. 卡片改为实色背景，避免半透明导致的"浑浊感"
+    cell.backgroundColor = kCardColor;
     cell.contentView.backgroundColor = [UIColor clearColor];
     
-    // 2. 选中样式改为无（或者自定义）
+    // 2. 无点击高亮
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    // 3. 处理文字颜色 (遍历 Cell 的子视图或者直接设置已知属性)
-    // 假设 Cell 内部暴露了 label 属性，或者通过 KVC/Tag 修改
-    // 这里做通用处理，尝试设置 TextLabel
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    // 3. 字体优化：左侧小而灰，右侧大而亮
+    cell.textLabel.textColor = kTitleColor;
+    cell.textLabel.font = [UIFont systemFontOfSize:14 weight:UIFontWeightRegular]; // 稍微改小一点，显得精致
     
-    // 如果是自定义 Cell，尝试修改其 Label 颜色
+    cell.detailTextLabel.textColor = kValueColor;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightMedium];
+    
+    // 尝试自定义 Cell 内部的 Label 样式
     if ([cell respondsToSelector:@selector(nameLabel)]) {
         UILabel *label = [cell valueForKey:@"nameLabel"];
-        label.textColor = [UIColor whiteColor];
+        label.textColor = kTitleColor;
+        label.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular]; // 左侧：常规字体，灰色
     }
     if ([cell respondsToSelector:@selector(valueLabel)]) {
         UILabel *label = [cell valueForKey:@"valueLabel"];
-        label.textColor = kCoolAccentColor; // 值显示为高亮色
+        label.textColor = kValueColor; // 默认右侧白色
+        label.font = [UIFont systemFontOfSize:15 weight:UIFontWeightBold]; // 右侧：加粗，白色，突出重点
+        
+        // 特殊状态颜色处理
+        NSString *text = label.text;
+        if ([text containsString:@"已连接"] || [text containsString:@"开启"]) {
+            label.textColor = kSuccessColor; // 绿色表示状态好
+        } else if ([text containsString:@"WIFI"] || [text containsString:@"IP"]) {
+            label.textColor = kAccentColor; // 蓝色表示关键信息
+        }
     }
     
-    // 4. 给 Cell 加一点圆角和边框效果
-    cell.layer.cornerRadius = 8.0;
+    // 4. 圆角优化：iOS 风格圆角
+    cell.layer.cornerRadius = 10.0;
     cell.layer.masksToBounds = YES;
+    cell.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.05].CGColor; // 极淡的边框，增加精致感
     cell.layer.borderWidth = 0.5;
-    cell.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.1].CGColor;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -190,6 +207,8 @@
         YKAppContentArrowsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YKAppContentArrowsCell" forIndexPath:indexPath];
         cell.nameLabel.text = itemInfo[@"key"];
         cell.valueLabel.text = itemInfo[@"value"];
+        // 箭头或者可点击项，右侧文字稍微变灰一点表示不是重点数据
+        cell.valueLabel.textColor = [UIColor lightGrayColor];
         baseCell = cell;
     } else if ([cellType isEqualToString:@"YKAppSwitchCell"]) {
         YKAppSwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YKAppSwitchCell" forIndexPath:indexPath];
@@ -197,13 +216,13 @@
         cell.nameLabel.text = itemInfo[@"key"];
         cell.switchView.on = [itemInfo[@"value"] intValue];
         // 调整 Switch 颜色
-        cell.switchView.onTintColor = kCoolAccentColor;
+        cell.switchView.onTintColor = kSuccessColor; // 开关绿色，符合直觉
         baseCell = cell;
     } else if ([cellType isEqualToString:@"YKWarningCell"]) {
         
         YKWarningCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YKWarningCell" forIndexPath:indexPath];
         // 警告 Cell 特殊处理
-        cell.backgroundColor = [UIColor colorWithRed:0.3 green:0.1 blue:0.1 alpha:0.3];
+        cell.backgroundColor = [UIColor colorWithRed:0.8 green:0.2 blue:0.2 alpha:0.15]; // 淡红色背景
         baseCell = cell;
     }
     
@@ -216,15 +235,15 @@
     YKHomeHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"YKHomeHeaderFooterView"];
     NSDictionary *sectionInfo = self.sections[section];
     header.titleLabel.text = sectionInfo[@"title"];
-    // Header 样式优化
+    // Header 样式优化：更大气
     header.contentView.backgroundColor = [UIColor clearColor];
-    header.titleLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
-    header.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    header.titleLabel.textColor = [UIColor colorWithWhite:0.9 alpha:1.0]; // 标题亮白
+    header.titleLabel.font = [UIFont systemFontOfSize:18 weight:UIFontWeightBold]; // 加大加粗
     return header;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 50.0;
+    return 60.0; // 增加间距
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -361,7 +380,7 @@
             if ([ip isEqualToString:@"127.0.0.1"]) {
                 value = @"USB连接";
             } else {
-                value = [NSString stringWithFormat:@"WIFI连接(%@)", ip];
+                value = [NSString stringWithFormat:@"WIFI (%@)", ip];
             }
             
             [temConnected addObject:@{
@@ -372,7 +391,7 @@
         }
     }
     
-    [self.sections addObject:@{@"title": @"📲 连接设备", @"items":temConnected}];
+    [self.sections addObject:@{@"title": @"连接设备", @"items":temConnected}];
     
     
     NSString *environment = deviceInfo[@"environment"];
@@ -381,30 +400,30 @@
     [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"设备名称", @"value": deviceName}];
     
     NSString *deviceIP = deviceInfo[@"ip"];
-    [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"IP", @"value": deviceIP}];
+    [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"本地 IP", @"value": deviceIP}];
     
     NSString *deviceID = deviceInfo[@"deviceID"];
     if (deviceID.length > 0) {
-        [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"设备标识", @"value": deviceID}];
+        [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"设备 ID", @"value": deviceID}];
     } else {
-        [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"设备标识", @"value": deviceID}];
+        [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"设备 ID", @"value": deviceID}];
     }
-    [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"越狱方式", @"value": environment}];
-    [self.sections addObject:@{@"title": @"🆔 设备信息", @"items":infoArray}];
+    [infoArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"越狱环境", @"value": environment}];
+    [self.sections addObject:@{@"title": @"设备信息", @"items":infoArray}];
     
     
     NSMutableArray *otherArray = [[NSMutableArray alloc] init];
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [otherArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"版本号", @"value": appVersion}];
+    [otherArray addObject:@{@"cellType": @"YKAppKeyValueCell", @"key": @"当前版本", @"value": appVersion}];
     [otherArray addObject:@{@"cellType": @"YKAppContentArrowsCell", @"key": @"重启服务", @"value": @""}];
-    [self.sections addObject:@{@"title": @"🧩 其他", @"items":otherArray}];
+    [self.sections addObject:@{@"title": @"其他设置", @"items":otherArray}];
     
     
     // 判断该设备型号支持不支持
     if (!supportsThisDevice) {
         NSMutableArray *warningArray = [[NSMutableArray alloc] init];
         [warningArray addObject:@{@"cellType": @"YKWarningCell", @"key": @"", @"value": @""}];
-        [self.sections addObject:@{@"title": @"⚠️ 提示", @"items":warningArray}];
+        [self.sections addObject:@{@"title": @"提示", @"items":warningArray}];
     }
     
     
@@ -455,18 +474,18 @@
         NSMutableAttributedString *attriString = [[NSMutableAttributedString alloc] init];
         
         // --- 设置标题 ---
-        NSString *title = @"> SYSTEM_CRASH_REPORT DETECTED...\n";
+        NSString *title = @"> LOG OUTPUT...\n";
         NSDictionary *titleAttr = @{
-            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Bold" size:16.0f] ?: [UIFont boldSystemFontOfSize:16],
-            NSForegroundColorAttributeName: [UIColor redColor] // 红色警告
+            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Bold" size:14.0f] ?: [UIFont boldSystemFontOfSize:14],
+            NSForegroundColorAttributeName: [UIColor lightGrayColor]
         };
         [attriString appendAttributedString:[[NSAttributedString alloc] initWithString:title attributes:titleAttr]];
         
         // --- 添加一条分割线 ---
         NSString *line = @"> ---------------------------------\n\n";
         NSDictionary *lineAttr = @{
-            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Regular" size:14.0f] ?: [UIFont systemFontOfSize:14],
-            NSForegroundColorAttributeName: [UIColor grayColor]
+            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Regular" size:12.0f] ?: [UIFont systemFontOfSize:12],
+            NSForegroundColorAttributeName: [UIColor darkGrayColor]
         };
         [attriString appendAttributedString:[[NSAttributedString alloc] initWithString:line attributes:lineAttr]];
         
@@ -475,8 +494,8 @@
         NSString *contentText = (msg && msg.length > 0) ? [NSString stringWithFormat:@"> Error: %@", msg] : (firstTxtFileName ?: @"> No content.");
         
         NSDictionary *contentAttr = @{
-            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Regular" size:13.0f] ?: [UIFont systemFontOfSize:13],
-            NSForegroundColorAttributeName: kCoolAccentColor // 终端绿色/青色
+            NSFontAttributeName: [UIFont fontWithName:@"Menlo-Regular" size:12.0f] ?: [UIFont systemFontOfSize:12],
+            NSForegroundColorAttributeName: kValueColor // 使用白色作为日志内容
         };
         [attriString appendAttributedString:[[NSAttributedString alloc] initWithString:contentText attributes:contentAttr]];
         
@@ -510,7 +529,7 @@
         _navigationView = [[YKHomeNavigationView alloc] init];
         _navigationView.delegate = self;
         _navigationView.translatesAutoresizingMaskIntoConstraints = false;
-        // 假设导航栏也需要透明以融合背景
+        // 导航栏透明
         _navigationView.backgroundColor = [UIColor clearColor];
     }
     return _navigationView;
@@ -519,9 +538,9 @@
 -(UIActivityIndicatorView *)activityIndicatorView {
     
     if (!_activityIndicatorView) {
-        // 改为大号白色加载菊花
+        // 大号白色加载菊花
         _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
-        _activityIndicatorView.color = kCoolAccentColor; // 使用青色
+        _activityIndicatorView.color = [UIColor whiteColor]; // 纯白，不搞花哨的
         _activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false;
     }
     return _activityIndicatorView;
@@ -537,6 +556,7 @@
         _tableView.backgroundColor = [UIColor clearColor]; // 透明背景
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone; // 移除默认分割线
         _tableView.indicatorStyle = UIScrollViewIndicatorStyleWhite; // 滚动条白色
+        _tableView.contentInset = UIEdgeInsetsMake(10, 0, 20, 0); // 增加顶部底部间距
         
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -558,23 +578,17 @@
     if (!_logTextView) {
         
         _logTextView = [[UITextView alloc] initWithFrame:self.view.bounds];
-        // 终端样式背景
-        _logTextView.backgroundColor = [UIColor colorWithRed:0.05 green:0.05 blue:0.05 alpha:0.95];
+        // 终端样式背景，深黑
+        _logTextView.backgroundColor = [UIColor colorWithRed:0.08 green:0.08 blue:0.1 alpha:0.95];
         // 终端样式字体
-        _logTextView.font = [UIFont fontWithName:@"Menlo-Regular" size:13.0f];
-        _logTextView.textColor = kCoolAccentColor;
+        _logTextView.font = [UIFont fontWithName:@"Menlo-Regular" size:12.0f];
+        _logTextView.textColor = [UIColor whiteColor];
         _logTextView.editable = NO;
         _logTextView.selectable = YES;
         _logTextView.scrollEnabled = YES;
         _logTextView.userInteractionEnabled = YES;
         _logTextView.textContainerInset = UIEdgeInsetsMake(20, 15, 20, 15); // 增加内边距
         _logTextView.hidden = YES;
-        
-        // 增加圆角和边框
-        _logTextView.layer.cornerRadius = 12;
-        _logTextView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.2].CGColor;
-        _logTextView.layer.borderWidth = 1.0;
-        _logTextView.clipsToBounds = YES;
         
         _logTextView.translatesAutoresizingMaskIntoConstraints = false;
     }

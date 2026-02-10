@@ -40,20 +40,26 @@ static YKSBRecordWindow *recordWindow = nil;
 -(void)configView {
     
     _viewController = [[UIViewController alloc] init];
-    // 背景稍微加深一点，提升对比度
-    _viewController.view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.6];
+    
+    // 升级：使用高斯模糊背景，替代纯色背景，更有质感
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurView.frame = [UIScreen mainScreen].bounds;
+    blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    blurView.alpha = 0.95; 
+    [_viewController.view addSubview:blurView];
     
     // 创建倒计时Label
     _countdownLabel = [[UILabel alloc] init];
-    // 使用等宽数字字体，防止倒计时数字宽度跳变
-    _countdownLabel.font = [UIFont monospacedDigitSystemFontOfSize:100 weight:UIFontWeightHeavy];
+    // 升级：使用最粗的字体 (Black)，视觉冲击力更强
+    _countdownLabel.font = [UIFont systemFontOfSize:120 weight:UIFontWeightBlack];
     _countdownLabel.textColor = [UIColor whiteColor];
     
-    // 添加阴影，增加立体感
+    // 升级：加强阴影效果，营造浮空立体感
     _countdownLabel.layer.shadowColor = [UIColor blackColor].CGColor;
-    _countdownLabel.layer.shadowOffset = CGSizeMake(0, 4);
-    _countdownLabel.layer.shadowOpacity = 0.6;
-    _countdownLabel.layer.shadowRadius = 8;
+    _countdownLabel.layer.shadowOffset = CGSizeMake(0, 5);
+    _countdownLabel.layer.shadowOpacity = 0.8;
+    _countdownLabel.layer.shadowRadius = 12;
     
     _countdownLabel.textAlignment = NSTextAlignmentCenter;
     _countdownLabel.text = [NSString stringWithFormat:@"%ld", (long)self.countdownValue];
@@ -86,6 +92,14 @@ static YKSBRecordWindow *recordWindow = nil;
     if (self.countdownValue > 0) {
         // 更新数字
         self.countdownLabel.text = [NSString stringWithFormat:@"%ld", (long)self.countdownValue];
+        
+        // 升级：颜色随倒计时变化，增加紧迫感
+        if (self.countdownValue == 2) {
+            self.countdownLabel.textColor = [UIColor systemYellowColor];
+        } else if (self.countdownValue == 1) {
+            self.countdownLabel.textColor = [UIColor systemOrangeColor];
+        }
+        
         // 执行弹性动画
         [self animateLabelBounce];
     } else {
@@ -93,64 +107,89 @@ static YKSBRecordWindow *recordWindow = nil;
         [self.timer invalidate];
         self.timer = nil;
         
-        self.countdownLabel.font = [UIFont boldSystemFontOfSize:60];
-        self.countdownLabel.text = @"开始录制";
+        self.countdownLabel.font = [UIFont systemFontOfSize:80 weight:UIFontWeightBlack];
+        self.countdownLabel.textColor = [UIColor systemRedColor]; // 最终变为红色
+        self.countdownLabel.text = @"REC"; // 简洁有力
         
         // 执行结束爆发动画
         [self startStartAnimation];
     }
 }
 
-#pragma mark - 数字跳动动画 (重击效果)
+#pragma mark - 数字跳动动画 (重击 + 旋转 + 震动)
 - (void)animateLabelBounce {
-    // 1. 初始状态：巨大且透明 (模拟从屏幕外砸向屏幕)
-    self.countdownLabel.transform = CGAffineTransformMakeScale(2.5, 2.5);
+    // 升级：添加触觉反馈 (需要真机)
+    if (@available(iOS 10.0, *)) {
+        UIImpactFeedbackGenerator *feedback = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
+        [feedback prepare];
+        [feedback impactOccurred];
+    }
+
+    // 1. 初始状态：巨大、透明、带一点随机旋转 (模拟撞击感)
+    CGFloat rotationAngle = (arc4random_uniform(20) - 10) * (M_PI / 180.0); // -10度到10度随机旋转
+    CGAffineTransform scaleTransform = CGAffineTransformMakeScale(3.5, 3.5);
+    CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(rotationAngle);
+    
+    self.countdownLabel.transform = CGAffineTransformConcat(scaleTransform, rotateTransform);
     self.countdownLabel.alpha = 0.0;
     
-    // 2. 弹性复位 (带点震动的重击感)
-    [UIView animateWithDuration:0.6
+    // 2. 弹性复位
+    [UIView animateWithDuration:0.7
                           delay:0
-         usingSpringWithDamping:0.6  // 阻尼稍微调高一点，让撞击感更实
-          initialSpringVelocity:0.0
+         usingSpringWithDamping:0.55  // 较强弹性
+          initialSpringVelocity:0.8
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-        self.countdownLabel.transform = CGAffineTransformIdentity; // 恢复原大小
+        self.countdownLabel.transform = CGAffineTransformIdentity; // 恢复正位
         self.countdownLabel.alpha = 1.0;
     } completion:nil];
 }
 
-#pragma mark - 结束动画 (蓄力 -> 闪光爆发)
+#pragma mark - 结束动画 (蓄力 -> 闪光 + 炸裂)
 - (void)startStartAnimation {
-    // 1. 蓄力阶段：文字变红，稍微缩小
-    self.countdownLabel.textColor = [UIColor systemRedColor]; // 变成录制红
-    
+    // 升级：成功提示震动
+    if (@available(iOS 10.0, *)) {
+        UINotificationFeedbackGenerator *feedback = [[UINotificationFeedbackGenerator alloc] init];
+        [feedback prepare];
+        [feedback notificationOccurred:UINotificationFeedbackTypeSuccess];
+    }
+
+    // 1. 蓄力阶段：文字瞬间缩小，仿佛在积蓄能量
     [UIView animateWithDuration:0.15 animations:^{
-        self.countdownLabel.transform = CGAffineTransformMakeScale(0.7, 0.7);
+        self.countdownLabel.transform = CGAffineTransformMakeScale(0.6, 0.6);
     } completion:^(BOOL finished) {
         
-        // 2. 爆发阶段：模拟闪光灯效果 + 文字炸开
+        // 2. 爆发阶段：模拟闪光灯效果 + 文字炸裂飞出
         [UIView animateWithDuration:0.35
                               delay:0
-                            options:UIViewAnimationOptionCurveEaseOut
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
             
-            // 背景瞬间变亮（闪光效果）
+            // 背景瞬间变白（闪光效果）
             self.viewController.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+            // 隐藏模糊层
+            for (UIView *subview in self.viewController.view.subviews) {
+                if ([subview isKindOfClass:[UIVisualEffectView class]]) {
+                    subview.alpha = 0.0;
+                }
+            }
             
-            // 文字极速放大并消失
-            self.countdownLabel.transform = CGAffineTransformMakeScale(5.0, 5.0);
+            // 文字极速放大并带旋转消失
+            CGAffineTransform bigScale = CGAffineTransformMakeScale(6.0, 6.0);
+            CGAffineTransform rotate = CGAffineTransformMakeRotation(M_PI_2 / 2); // 旋转45度
+            self.countdownLabel.transform = CGAffineTransformConcat(bigScale, rotate);
             self.countdownLabel.alpha = 0.0;
             
         } completion:^(BOOL finished) {
             
-            // 3. 整体快速隐去，把控制权交给回调
-            [UIView animateWithDuration:0.15 animations:^{
+            // 3. 快速隐去窗口，触发回调
+            if (self.completionBlock) {
+                self.completionBlock();
+            }
+            
+            [UIView animateWithDuration:0.2 animations:^{
                 self.alpha = 0.0;
             } completion:^(BOOL finished) {
-                // 清理工作
-                if (self.completionBlock) {
-                    self.completionBlock();
-                }
                 [recordWindow resignKeyWindow];
                 recordWindow.hidden = YES;
                 recordWindow = nil;
