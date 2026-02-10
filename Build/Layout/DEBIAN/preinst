@@ -1,9 +1,0 @@
-#!/bin/bash
-echo 'preinst'
-echo 'Clean old files...'
-killall -9 pasted >/dev/null 2>&1
-killall -9 YKApp >/dev/null 2>&1
-killall -9 YKService >/dev/null 2>&1
-rm -rf /var/jb/Applications/YKApp.app
-rm -rf /var/jb/Library/LaunchDaemons/com.sky.yklaunchd.plist
-exit 0
