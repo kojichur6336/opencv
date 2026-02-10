@@ -1,6 +1,0 @@
-module YKSocket {
-  umbrella header "YKSocket-umbrella.h"
-
-  export *
-  module * { export * }
-}

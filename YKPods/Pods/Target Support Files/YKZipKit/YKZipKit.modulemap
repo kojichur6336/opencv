@@ -1,6 +1,0 @@
-module YKZipKit {
-  umbrella header "YKZipKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
