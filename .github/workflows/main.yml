@@ -62,8 +62,11 @@ jobs:
           sudo cp -R "$DEFAULT_CLANG_LIB_DIR" "$CUSTOM_CLANG_VERSION_DIR/"
           echo "✅ 工具链安装完成。"
 
-      - name: 安装依赖 (dpkg, ldid)
-        run: brew install dpkg ldid
+      - name: 安装依赖
+        run: |
+          cd YKPods
+          pod install
+          brew install dpkg ldid
 
       - name: 权限设置
         working-directory: ./Build 
