@@ -166,12 +166,8 @@
 #pragma mark - USB接受到一个新的连接时调用
 -(void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket
 {
-    NSString *ip = [newSocket connectedHost];
-    if ([ip isEqualToString:YK_USB_LOCALHOST])
-    {
-        _clientSocket = newSocket;
-        [self downLoadNextChunk];
-    }
+    _clientSocket = newSocket;
+    [self downLoadNextChunk];
 }
 
 #pragma mark - WIFI连接成功回调

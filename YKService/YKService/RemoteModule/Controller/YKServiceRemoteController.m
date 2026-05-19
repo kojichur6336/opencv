@@ -23,6 +23,7 @@
 #import "YKClientHeartBeat.h"
 #import "YKPortScanManager.h"
 #import "YKClientSocketWIFI.h"
+#import "YKClientSocketUSB.h"
 #import "YKServiceIOSurface.h"
 #import "YKServiceFileLogger.h"
 #import "YKScreenLockedStatus.h"
@@ -320,6 +321,14 @@
     }
 }
 
+#pragma mark - 主控监听连接（USB 端口转发或局域网直连）使用手机端服务端模式
+-(NSString *)yksr_fileTransferIpForDevice:(id<YKClientDeviceProtocol>)device {
+    if ([device isKindOfClass:[YKClientSocketUSB class]]) {
+        return YK_USB_LOCALHOST;
+    }
+    return device.ip;
+}
+
 #pragma mark - 处理传输文件
 -(void)handleEvent_transferFile:(NSDictionary *)json yksr_device:(id<YKClientDeviceProtocol>)device {
     
@@ -333,7 +342,7 @@
             //手机上传文件到PC
             YKFileUploadModel *model = [[YKFileUploadModel alloc] init];
             model.identity = result[@"id"];
-            model.ip = device.ip;
+            model.ip = [self yksr_fileTransferIpForDevice:device];
             model.port = [result[@"port"] intValue];
             model.path = result[@"path"];
             __weak typeof(self) weakSelf = self;
@@ -354,7 +363,7 @@
             //PC文件上传到手机
             YKFileDownloadModel *model = [[YKFileDownloadModel alloc] init];
             model.identity = result[@"id"];
-            model.ip = device.ip;
+            model.ip = [self yksr_fileTransferIpForDevice:device];
             model.port = [result[@"port"] intValue];
             model.path = result[@"path"];
             model.totalFileSize = [result[@"size"] longLongValue];
@@ -377,7 +386,7 @@
         
         YKFileDownloadModel *model = [[YKFileDownloadModel alloc] init];
         model.identity = result[@"id"];
-        model.ip = device.ip;
+        model.ip = [self yksr_fileTransferIpForDevice:device];
         model.port = [result[@"port"] intValue];
         
         NSString *name = result[@"name"];

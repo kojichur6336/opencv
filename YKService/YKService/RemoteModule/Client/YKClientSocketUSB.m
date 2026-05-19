@@ -37,7 +37,7 @@
         _socketQueue = dispatch_queue_create("com.sky.yk.usb.socket", NULL);
         _listeningSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:_socketQueue];
         _port = port;
-        _ip = YK_USB_LOCALHOST;
+        _ip = @"";
         _tag = -1;
         _delegate = delegate;
     }
@@ -69,7 +69,8 @@
 
 #pragma mark - 唯一标识
 -(NSString *)identifier {
-    return [NSString stringWithFormat:@"%@-%d",YK_USB_LOCALHOST, _port];
+    NSString *host = _ip.length > 0 ? _ip : YK_USB_LOCALHOST;
+    return [NSString stringWithFormat:@"%@-%d", host, _port];
 }
 
 #pragma mark - 判断是否连接
@@ -104,13 +105,15 @@
 #pragma mark - 接受到一个新的连接时调用
 -(void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket
 {
-    LOGI(@"收到USB连接进来了");
     NSString *ip = [newSocket connectedHost];
-    if ([ip isEqualToString:YK_USB_LOCALHOST])
-    {
-        self.connectedClient = newSocket;
-        [_delegate clientSocketUSB:self didConnectToHost:ip port:_port];
+    LOGI(@"收到主控连接: %@", ip);
+    if (self.connectedClient) {
+        [newSocket disconnect];
+        return;
     }
+    _ip = ip ?: @"";
+    self.connectedClient = newSocket;
+    [_delegate clientSocketUSB:self didConnectToHost:_ip port:_port];
 }
 
 #pragma mark - 读取到数据时调用
@@ -125,6 +128,7 @@
     LOGI(@"收到USB断开连接%@",err.localizedDescription);
     if (sock == self.connectedClient) {
         self.connectedClient = nil;
+        _ip = @"";
         [_delegate clientSocketUSB:self withError:err];
     }
 }
